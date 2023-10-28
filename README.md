@@ -3,14 +3,10 @@
 <br/>
 </div>
 
-<div STYLE="page-break-after: always;"></div>
+#### Ruf is an util function library for rust. It provides a series of usefulfunctions to make your rust development easier.
 
-<p style="font-size:22px; font-weight:bold;">
-Ruf is an util function library for rust. It provides a series of useful functions to make your rust development easier.
-</p>
-
-_Ruf is currently under heavy development, you may need to wait until v1.0
-before applying it to your production._
+_Ruf is currently under heavy development, you may need to wait untilv1.0 before
+applying it to your production._
 
 _Ruf is short for "rust util function"._
 
