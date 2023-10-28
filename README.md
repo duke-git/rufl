@@ -3,7 +3,7 @@
 <br/>
 </div>
 
-#### Ruf is an util function library for rust. It provides a series of usefulfunctions to make your rust development easier.
+#### Ruf is an util function library for rust. It provides a series of useful functions to make your rust development easier.
 
 _Ruf is currently under heavy development, you may need to wait untilv1.0 before
 applying it to your production._
