@@ -1,5 +1,14 @@
 /// Returns the substring after the first occurrence of a specified `substr` in the source string.
 ///
+/// # Arguments
+///
+/// * `s` - The input string to perform after operation.
+/// * `substr` - The substring to look for first occurrence in `s`.
+///
+/// # Returns
+///
+/// Returns the substring after the first occurrence of `substr` in `s`.
+///
 /// # Examples
 ///
 /// ```

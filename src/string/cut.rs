@@ -1,5 +1,13 @@
 /// Cut searches for the substring 'sep' in the source string, and splits the source string into two parts at the first occurrence of the substring 'sep': before and after.
-/// returns a tuple (before:String, after:String, found:bool)
+///
+/// # Arguments
+///
+/// * `s` - The input string to perform cut.
+/// * `sep` - The substring to look for first occurrence in `s`.
+///
+/// # Returns
+///
+/// Returns a tuple (before:String, after:String, found:bool).
 ///
 /// # Examples
 ///

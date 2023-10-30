@@ -1,5 +1,15 @@
 /// Pads string on the left and right sides if it's shorter than length. Padding characters are truncated if they can't be evenly divided by length.
 ///
+/// # Arguments
+///
+/// * `s` - The string to pad.
+/// * `length` - The padding length.
+/// * `pad_with` - The string used as padding.
+///
+/// # Returns
+///
+/// Returns the padded string.
+///
 /// # Examples
 ///
 /// ```

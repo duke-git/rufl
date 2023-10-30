@@ -1,5 +1,14 @@
 /// Returns the substring before the last occurrence of a specified `substr` in the source string.
 ///
+/// # Arguments
+///
+/// * `s` - The input string to perform before_last operation.
+/// * `substr` - The substring to look for the last occurrence in `s`.
+///
+/// # Returns
+///
+/// Returns the substring before the last occurrence of `substr` in `s`.
+///
 /// # Examples
 ///
 /// ```

@@ -1,4 +1,13 @@
-/// Returns the substring after_last the last occurrence of a specified `substr` in the source string.
+/// Returns the substring after the last occurrence of a specified `substr` in the source string.
+///
+/// # Arguments
+///
+/// * `s` - The input string to perform after_last operation.
+/// * `substr` - The substring to look for last occurrence in `s`.
+///
+/// # Returns
+///
+/// Returns the substring after the last occurrence of `substr` in `s`.
 ///
 /// # Examples
 ///
