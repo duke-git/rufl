@@ -24,3 +24,6 @@ pub use pad_start::*;
 
 mod pad_end;
 pub use pad_end::*;
+
+mod split_words;
+pub use split_words::*;
