@@ -6,13 +6,13 @@
 /// use ruf::string;
 ///
 /// let foo = string::before("foo", "f");
-/// assert_eq!("".to_string(), foo);
+/// assert_eq!("", foo);
 ///
-/// let bar = string::before("bar".to_string(), "a");
-/// assert_eq!("b".to_string(), bar);
+/// let bar = string::before("bar", "a");
+/// assert_eq!("b", bar);
 ///
 /// let boo = string::before("boo", "c");
-/// assert_eq!("boo".to_string(), boo);
+/// assert_eq!("boo", boo);
 ///
 /// ```
 
@@ -29,9 +29,9 @@ mod tests {
 
     #[test]
     fn test_before() {
-        assert_eq!("".to_string(), before("foo", ""));
-        assert_eq!("foo".to_string(), before("foo", "a"));
-        assert_eq!("".to_string(), before("foo", "foo"));
-        assert_eq!("foo".to_string(), before("foo/bar", "/"));
+        assert_eq!("", before("foo", ""));
+        assert_eq!("foo", before("foo", "a"));
+        assert_eq!("", before("foo", "foo"));
+        assert_eq!("foo", before("foo/bar", "/"));
     }
 }

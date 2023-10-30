@@ -6,13 +6,13 @@
 /// use ruf::string;
 ///
 /// let foo = string::after("foo", "f");
-/// assert_eq!("oo".to_string(), foo);
+/// assert_eq!("oo", foo);
 ///
-/// let bar = string::after("bar".to_string(), "a");
-/// assert_eq!("r".to_string(), bar);
+/// let bar = string::after("bar", "a");
+/// assert_eq!("r", bar);
 ///
 /// let boo = string::after("boo", "c");
-/// assert_eq!("boo".to_string(), boo);
+/// assert_eq!("boo", boo);
 ///
 /// ```
 
@@ -29,9 +29,9 @@ mod tests {
 
     #[test]
     fn test_after() {
-        assert_eq!("foo".to_string(), after("foo", ""));
-        assert_eq!("foo".to_string(), after("foo", "a"));
-        assert_eq!("".to_string(), after("foo", "foo"));
-        assert_eq!("bar/boo".to_string(), after("foo/bar/boo", "/"));
+        assert_eq!("foo", after("foo", ""));
+        assert_eq!("foo", after("foo", "a"));
+        assert_eq!("", after("foo", "foo"));
+        assert_eq!("bar/boo", after("foo/bar/boo", "/"));
     }
 }

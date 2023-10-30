@@ -6,13 +6,13 @@
 /// use ruf::string;
 ///
 /// let foo = string::before_last("foo", "o");
-/// assert_eq!("fo".to_string(), foo);
+/// assert_eq!("fo", foo);
 ///
-/// let bar = string::before_last("bar".to_string(), "a");
-/// assert_eq!("b".to_string(), bar);
+/// let bar = string::before_last("bar", "a");
+/// assert_eq!("b", bar);
 ///
 /// let boo = string::before_last("boo", "c");
-/// assert_eq!("boo".to_string(), boo);
+/// assert_eq!("boo", boo);
 ///
 /// ```
 
@@ -29,9 +29,9 @@ mod tests {
 
     #[test]
     fn test_before_last() {
-        assert_eq!("".to_string(), before_last("foo", "foo"));
-        assert_eq!("foo".to_string(), before_last("foo", ""));
-        assert_eq!("fo".to_string(), before_last("foo", "o"));
-        assert_eq!("foo/bar".to_string(), before_last("foo/bar/boo", "/"));
+        assert_eq!("", before_last("foo", "foo"));
+        assert_eq!("foo", before_last("foo", ""));
+        assert_eq!("fo", before_last("foo", "o"));
+        assert_eq!("foo/bar", before_last("foo/bar/boo", "/"));
     }
 }

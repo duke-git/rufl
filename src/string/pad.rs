@@ -6,13 +6,13 @@
 /// use ruf::string;
 ///
 /// let foo = string::pad("foo", 3, "*");
-/// assert_eq!("foo".to_string(), foo);
+/// assert_eq!("foo", foo);
 ///
-/// let bar = string::pad("foo".to_string(), 6, "**");
-/// assert_eq!("*foo**".to_string(), bar);
+/// let bar = string::pad("foo", 6, "**");
+/// assert_eq!("*foo**", bar);
 ///
 /// let boo = string::pad("foo", 8, "********");
-/// assert_eq!("**foo***".to_string(), boo);
+/// assert_eq!("**foo***", boo);
 ///
 /// ```
 
@@ -38,10 +38,10 @@ mod tests {
 
     #[test]
     fn test_pad() {
-        assert_eq!("*foo**".to_string(), pad("foo", 6, "*"));
-        assert_eq!("*foo**".to_string(), pad("foo", 6, "**"));
-        assert_eq!("*foo**".to_string(), pad("foo", 6, "******"));
-        assert_eq!("_-foo_-_".to_string(), pad("foo", 8, "_-"));
-        assert_eq!("1foo12".to_string(), pad("foo".to_string(), 6, "12345678"));
+        assert_eq!("*foo**", pad("foo", 6, "*"));
+        assert_eq!("*foo**", pad("foo", 6, "**"));
+        assert_eq!("*foo**", pad("foo", 6, "******"));
+        assert_eq!("_-foo_-_", pad("foo", 8, "_-"));
+        assert_eq!("1foo12", pad("foo", 6, "12345678"));
     }
 }
