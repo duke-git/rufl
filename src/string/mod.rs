@@ -13,6 +13,9 @@ pub use before::*;
 mod before_last;
 pub use before_last::*;
 
+mod cut;
+pub use cut::*;
+
 mod pad;
 pub use pad::*;
 
