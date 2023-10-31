@@ -16,6 +16,9 @@ pub use before_last::*;
 mod camel_case;
 pub use camel_case::*;
 
+mod capitalize;
+pub use capitalize::*;
+
 mod cut;
 pub use cut::*;
 
