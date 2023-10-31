@@ -26,9 +26,13 @@ pub fn camel_case(s: impl AsRef<str>) -> String {
         0 => s.as_ref().to_string(),
         _ => crate::string::split_words(s)
             .into_iter()
-            .map(|item| item.to_lowercase())
+            .enumerate()
+            .map(|(i, item)| match i {
+                0 => item.to_lowercase(),
+                _ => crate::string::capitalize(item),
+            })
             .collect::<Vec<String>>()
-            .join("_"),
+            .join(""),
     }
 }
 
