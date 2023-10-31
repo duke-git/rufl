@@ -37,5 +37,8 @@ pub use pad_end::*;
 mod snake_case;
 pub use snake_case::*;
 
+mod pascal_case;
+pub use pascal_case::*;
+
 mod split_words;
 pub use split_words::*;
