@@ -55,7 +55,21 @@ pub fn split_words(s: impl AsRef<str>) -> Vec<String> {
     let mut i: usize = 0;
 
     while i < word_list.len() {
+        if word_list[i][0].chars().all(char::is_uppercase)
+            && word_list[i + 1][0].chars().all(char::is_lowercase)
+        {
+            words.push(word_list[i].join("") + &word_list[i + 1].join(""));
+            i += 2;
+            continue;
+        }
+
         if word_list[i][0].chars().all(char::is_lowercase) {
+            words.push(word_list[i].join(""));
+            i += 1;
+            continue;
+        }
+
+        if word_list[i][0].chars().all(char::is_uppercase) {
             words.push(word_list[i].join(""));
             i += 1;
             continue;
@@ -64,14 +78,6 @@ pub fn split_words(s: impl AsRef<str>) -> Vec<String> {
         if word_list[i][0].chars().all(char::is_numeric) {
             words.push(word_list[i].join(""));
             i += 1;
-            continue;
-        }
-
-        if word_list[i][0].chars().all(char::is_uppercase)
-            && word_list[i + 1][0].chars().all(char::is_lowercase)
-        {
-            words.push(word_list[i].join("") + &word_list[i + 1].join(""));
-            i += 2;
             continue;
         }
 
@@ -91,6 +97,7 @@ mod tests {
         assert_eq!(vec!["foo", "bar"], split_words("foo bar"));
         assert_eq!(vec!["foo", "Bar"], split_words("fooBar"));
         assert_eq!(vec!["foo", "bar"], split_words("foo&bar"));
+        assert_eq!(vec!["FOO", "BAR"], split_words("__FOO_BAR__"));
 
         assert_eq!(
             vec!["foo", "Bar", "Foo", "123"],
