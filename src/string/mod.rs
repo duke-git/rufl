@@ -34,11 +34,17 @@ pub use pad_start::*;
 mod pad_end;
 pub use pad_end::*;
 
-mod snake_case;
-pub use snake_case::*;
-
 mod pascal_case;
 pub use pascal_case::*;
+
+mod remove;
+pub use remove::*;
+
+// mod remove_first;
+// pub use remove_first::*;
+
+mod snake_case;
+pub use snake_case::*;
 
 mod split_words;
 pub use split_words::*;
