@@ -40,8 +40,11 @@ pub use pascal_case::*;
 mod remove;
 pub use remove::*;
 
-// mod remove_first;
-// pub use remove_first::*;
+mod remove_first;
+pub use remove_first::*;
+
+mod remove_last;
+pub use remove_last::*;
 
 mod snake_case;
 pub use snake_case::*;
