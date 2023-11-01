@@ -40,6 +40,9 @@ pub use pascal_case::*;
 mod remove;
 pub use remove::*;
 
+mod removen;
+pub use removen::*;
+
 mod remove_first;
 pub use remove_first::*;
 
