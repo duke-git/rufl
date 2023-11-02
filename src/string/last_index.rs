@@ -6,7 +6,7 @@
 ///
 /// * `s` - The input string to perform index.
 /// * `search` - The substring to search for.
-/// * `position` - The position of source string to start to search. Start position is 0.
+/// * `position` - The position of source string to end to search. (not included)
 ///
 /// # Returns
 ///
