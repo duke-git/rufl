@@ -22,6 +22,9 @@ pub use capitalize::*;
 mod cut;
 pub use cut::*;
 
+mod index;
+pub use index::*;
+
 mod kebab_case;
 pub use kebab_case::*;
 
