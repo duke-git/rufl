@@ -27,7 +27,7 @@
 
 pub fn index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
     match search.len() {
-        0 => -1,
+        0 => 0,
         _ => {
             if s.as_ref().chars().count() <= position {
                 return -1;
@@ -52,7 +52,7 @@ mod tests {
 
     #[test]
     fn test_removen() {
-        assert_eq!(-1, index("hello", "", 0));
+        assert_eq!(0, index("hello", "", 0));
         assert_eq!(2, index("hello", "l", 0));
         assert_eq!(2, index("hello", "l", 2));
         assert_eq!(3, index("hello", "l", 3));

@@ -25,6 +25,9 @@ pub use cut::*;
 mod index;
 pub use index::*;
 
+mod last_index;
+pub use last_index::*;
+
 mod kebab_case;
 pub use kebab_case::*;
 
