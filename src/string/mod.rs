@@ -28,6 +28,9 @@ pub use index::*;
 mod last_index;
 pub use last_index::*;
 
+mod index_all;
+pub use index_all::*;
+
 mod kebab_case;
 pub use kebab_case::*;
 
@@ -57,6 +60,9 @@ pub use remove_last::*;
 
 mod snake_case;
 pub use snake_case::*;
+
+mod split_chars;
+pub use split_chars::*;
 
 mod split_words;
 pub use split_words::*;

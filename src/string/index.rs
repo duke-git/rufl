@@ -1,3 +1,5 @@
+use std::iter;
+
 /// Searches a string and returns the index of the first occurrence of the specified searched substring.
 ///
 /// # Arguments
@@ -33,11 +35,26 @@ pub fn index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
                 return -1;
             }
 
-            let substring = &s.as_ref()[s.as_ref().char_indices().nth(position).unwrap().0..];
+            let sub_string = &s.as_ref()[s.as_ref().char_indices().nth(position).unwrap().0..];
 
-            match substring.find(search) {
-                Some(i) => {
-                    let result = i + (s.as_ref().chars().count() - substring.chars().count());
+            // println!("sub_string is {:?}", sub_string);
+
+            match crate::string::split_chars(sub_string)
+                .iter()
+                .enumerate()
+                .position(|(pos, _)| {
+                    match &sub_string[sub_string.char_indices().nth(pos).unwrap().0..].find(search)
+                    {
+                        Some(n) => *n == 0,
+                        None => false,
+                    }
+                }) {
+                Some(n) => {
+                    // n as i32
+
+                    let result =
+                        n + (s.as_ref().char_indices().count() - sub_string.char_indices().count());
+
                     result as i32
                 }
                 None => -1,
@@ -54,12 +71,15 @@ mod tests {
     fn test_removen() {
         assert_eq!(0, index("hello", "", 0));
         assert_eq!(2, index("hello", "l", 0));
+        assert_eq!(2, index("hello", "l", 1));
         assert_eq!(2, index("hello", "l", 2));
         assert_eq!(3, index("hello", "l", 3));
 
         assert_eq!(0, index("你好你好!", "你好", 0));
-        assert_eq!(7, index("你好hello你好!", "你好", 2));
-        assert_eq!(-1, index("你好hello你好!", "你好", 9));
-        assert_eq!(-1, index("你好hello你好!", "你好", 10));
+        assert_eq!(2, index("你好你好", "你好", 1));
+        assert_eq!(2, index("你好你好", "你好", 2));
+        assert_eq!(7, index("你好hello你好", "你好", 2));
+        assert_eq!(-1, index("你好hello你好", "你好", 9));
+        assert_eq!(-1, index("你好hello你好", "你好", 10));
     }
 }
