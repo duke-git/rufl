@@ -69,3 +69,6 @@ pub use split_words::*;
 
 mod starts_with_offset;
 pub use starts_with_offset::*;
+
+mod title_case;
+pub use title_case::*;
