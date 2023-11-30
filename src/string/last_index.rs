@@ -33,7 +33,7 @@ pub fn last_index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
         substring = &s.as_ref()[..s.as_ref().char_indices().nth(position).unwrap().0];
     }
 
-    println!("substring is {} ", substring);
+    // println!("substring is {}", substring);
 
     match substring.rfind(search) {
         Some(i) => i as i32,
@@ -54,5 +54,7 @@ mod tests {
         assert_eq!(3, last_index("canal", "a", 100));
         assert_eq!(-1, last_index("canal", "x", 5));
         assert_eq!(2, last_index("canal", "", 2));
+        assert_eq!(0, last_index("你好hello你好", "你好", 4));
+        assert_eq!(11, last_index("你好hello你好", "你好", 10));
     }
 }
