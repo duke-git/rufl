@@ -37,8 +37,6 @@ pub fn index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
 
             let sub_string = &s.as_ref()[s.as_ref().char_indices().nth(position).unwrap().0..];
 
-            // println!("sub_string is {:?}", sub_string);
-
             match crate::string::split_chars(sub_string)
                 .iter()
                 .enumerate()
@@ -50,8 +48,6 @@ pub fn index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
                     }
                 }) {
                 Some(n) => {
-                    // n as i32
-
                     let result =
                         n + (s.as_ref().char_indices().count() - sub_string.char_indices().count());
 
