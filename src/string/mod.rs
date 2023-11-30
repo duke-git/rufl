@@ -75,3 +75,6 @@ pub use starts_with_offset::*;
 
 mod title_case;
 pub use title_case::*;
+
+mod upper_first;
+pub use upper_first::*;
