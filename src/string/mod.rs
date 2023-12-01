@@ -19,6 +19,9 @@ pub use camel_case::*;
 mod capitalize;
 pub use capitalize::*;
 
+mod hide;
+pub use hide::*;
+
 mod cut;
 pub use cut::*;
 
