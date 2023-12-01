@@ -42,18 +42,10 @@ pub fn hide(s: impl AsRef<str>, start: usize, end: usize, replace_str: &str) -> 
 
     format!(
         "{}{}{}",
-        substring(&s, 0, start),
+        crate::string::substring(&s, 0, start),
         replace_str,
-        substring(&s, end, str_size),
+        crate::string::substring(&s, end, str_size),
     )
-}
-
-fn substring(s: impl AsRef<str>, start: usize, end: usize) -> String {
-    if start > end || start == end {
-        return String::new();
-    }
-
-    s.as_ref().chars().skip(start).take(end - start).collect()
 }
 
 #[cfg(test)]
