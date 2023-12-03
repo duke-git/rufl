@@ -33,8 +33,6 @@ pub fn last_index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
         substring = &s.as_ref()[..s.as_ref().char_indices().nth(position).unwrap().0];
     }
 
-    // println!("substring is {}", substring);
-
     match substring.rfind(search) {
         Some(i) => i as i32,
         None => -1,

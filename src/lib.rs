@@ -3,3 +3,5 @@
 //!
 #![allow(unused)]
 pub mod string;
+
+pub mod random;
