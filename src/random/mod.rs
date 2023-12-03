@@ -23,5 +23,8 @@ pub use lower::*;
 mod alphabeta;
 pub use alphabeta::*;
 
+mod alpha_number;
+pub use alpha_number::*;
+
 mod generate;
 use generate::*;
