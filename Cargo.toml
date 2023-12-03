@@ -1,7 +1,13 @@
 [package]
 name = "ruf"
 version = "0.1.0"
+author = ["dudaodong@gmail.com"]
 edition = "2021"
+description = "An powerful util function library for rust"
+license = "MIT"
+repository = "https://github.com/duke-git/ruf"
+keywords = ["rust", "util", "lib", "lodash", "simple"]
+categories = ["utils"]
 
 [dependencies]
 fastrand = "2.0.1"

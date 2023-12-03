@@ -13,6 +13,6 @@ _Ruf是”rust util function"的缩写。_
 
 ## 特性
 
-- 💪 强大: 支持常用Rust开发特性, string, collection, net, crypto, concurrency, etc.
-- 💎 纯净: 只依赖Rust标准库.
-- 🛠 简洁: 结构组织良好，测试所有API函数.
+- 💪 强大: 支持常用Rust开发特性, string, collection, net, crypto, concurrency, etc。
+- 💎 纯净: 保持最小范围外部依赖。
+- 🛠 简洁: 结构组织良好，测试所有API函数。

@@ -16,5 +16,5 @@ _Ruf is short for "rust util function"._
 
 - 💪 Powerful: supports commonly used rust development features, string,
   collection, net, crypto, concurrency, etc.
-- 💎 Pure: only depends on rust standard library.
+- 💎 Pure: keep external dependencies to a minimum.
 - 🛠 Simple: well structure, test for every function.
