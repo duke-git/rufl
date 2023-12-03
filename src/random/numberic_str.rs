@@ -31,8 +31,10 @@ mod tests {
 
     #[test]
     fn test_numberic_str() {
-        let numberic_str = crate::random::numberic_str(6);
-        assert_eq!(true, numberic_str.chars().all(char::is_numeric));
-        assert_eq!(6, numberic_str.len());
+        let str = numberic_str(6);
+        assert_eq!(true, str.chars().all(char::is_numeric));
+        assert_eq!(6, str.len());
+
+        assert_eq!("".to_string(), numberic_str(0));
     }
 }

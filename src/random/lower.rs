@@ -15,9 +15,9 @@ use super::generate;
 /// ```
 /// use ruf::random;
 ///
-/// let lower_str = random::numberic_str(6);
+/// let lower_str = random::lower(6);
 ///
-/// assert_eq!(true, lower_str.chars().all(char::is_numeric));
+/// assert_eq!(true, lower_str.chars().all(char::is_lowercase));
 /// assert_eq!(6, lower_str.len());
 ///
 /// ```
@@ -31,10 +31,10 @@ mod tests {
 
     #[test]
     fn test_lower() {
-        let lower_str = crate::random::lower(6);
-        println!("{}", lower_str);
-
+        let lower_str = lower(6);
         assert_eq!(true, lower_str.chars().all(char::is_lowercase));
         assert_eq!(6, lower_str.len());
+
+        assert_eq!("".to_string(), lower(0));
     }
 }

@@ -15,9 +15,9 @@ use super::generate;
 /// ```
 /// use ruf::random;
 ///
-/// let upper_str = random::numberic_str(6);
+/// let upper_str = random::upper(6);
 ///
-/// assert_eq!(true, upper_str.chars().all(char::is_numeric));
+/// assert_eq!(true, upper_str.chars().all(char::is_uppercase));
 /// assert_eq!(6, upper_str.len());
 ///
 /// ```
@@ -31,10 +31,10 @@ mod tests {
 
     #[test]
     fn test_upper() {
-        let upper_str = crate::random::upper(6);
-        println!("{}", upper_str);
-
+        let upper_str = upper(6);
         assert_eq!(true, upper_str.chars().all(char::is_uppercase));
         assert_eq!(6, upper_str.len());
+
+        assert_eq!("".to_string(), upper(0));
     }
 }
