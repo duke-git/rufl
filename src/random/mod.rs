@@ -20,5 +20,8 @@ pub use upper::*;
 mod lower;
 pub use lower::*;
 
+mod alphabeta;
+pub use alphabeta::*;
+
 mod generate;
 use generate::*;
