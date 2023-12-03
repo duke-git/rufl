@@ -18,7 +18,7 @@ pub(super) fn generate_str(char_type: &str, length: usize) -> String {
     match char_type {
         "NUMBER" => chars = crate::random::NUMBERS,
         "UPPER" => chars = crate::random::UPPER_LETTERS,
-        "LOWWER" => chars = crate::random::LOWWER_LETTERS,
+        "LOWER" => chars = crate::random::LOWER_LETTERS,
         "LETTER" => chars = crate::random::LETTERS,
         "ALPHANUMERIC" => chars = crate::random::ALPHANUMERIC,
         "SYMBOL" => chars = crate::random::SYMBOL_CHARS,
