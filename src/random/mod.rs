@@ -10,8 +10,8 @@ pub use upper::*;
 mod lower;
 pub use lower::*;
 
-mod alphabeta;
-pub use alphabeta::*;
+mod alphabet;
+pub use alphabet::*;
 
 mod alpha_number;
 pub use alpha_number::*;
