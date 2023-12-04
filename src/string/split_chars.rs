@@ -38,5 +38,10 @@ mod tests {
         assert_eq!(vec!["h", "e", "l", "l", "o"], split_chars("hello"));
         assert_eq!(vec!["S", "z", "e", "ś", "ć"], split_chars("Sześć"));
         assert_eq!(vec!["你", "好"], split_chars("你好"));
+
+        assert_eq!(
+            vec!["a", "\u{310}", "e", "\u{301}", "o", "\u{308}", "\u{332}"],
+            split_chars("a̐éö̲")
+        );
     }
 }

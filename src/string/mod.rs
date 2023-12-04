@@ -19,6 +19,9 @@ pub use camel_case::*;
 mod capitalize;
 pub use capitalize::*;
 
+mod count_chars;
+pub use count_chars::*;
+
 mod count_graphemes;
 pub use count_graphemes::*;
 
