@@ -14,11 +14,9 @@
 /// ```rust
 /// use ruf::string;
 ///
-/// let chars1 = string::split_chars("hello");
-/// assert_eq!(chars1, vec!["h", "e", "l", "l", "o"]);
+/// assert_eq!(vec!["h", "e", "l", "l", "o"], string::split_chars("hello"));
 ///
-/// let chars2 = string::split_chars("你好");
-/// assert_eq!(chars2, vec!["你", "好"]);
+/// assert_eq!(vec!["你", "好"], string::split_chars("你好"));
 ///
 /// ```
 
