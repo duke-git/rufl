@@ -25,6 +25,12 @@ pub use count_chars::*;
 mod count_graphemes;
 pub use count_graphemes::*;
 
+mod count_words;
+pub use count_words::*;
+
+mod count_by;
+pub use count_by::*;
+
 mod hide;
 pub use hide::*;
 
