@@ -11,3 +11,4 @@ categories = ["utils"]
 
 [dependencies]
 fastrand = "2.0.1"
+unicode-segmentation = "1.10.1"

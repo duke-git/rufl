@@ -73,6 +73,9 @@ pub use split_chars::*;
 mod split_words;
 pub use split_words::*;
 
+mod split_graphemes;
+pub use split_graphemes::*;
+
 mod starts_with_offset;
 pub use starts_with_offset::*;
 
