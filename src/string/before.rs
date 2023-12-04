@@ -42,5 +42,8 @@ mod tests {
         assert_eq!("foo", before("foo", "a"));
         assert_eq!("", before("foo", "foo"));
         assert_eq!("foo", before("foo/bar", "/"));
+
+        assert_eq!("rust", before("rust你好c++你好", "你好"));
+        assert_eq!("Jsem ", before("Jsem počítačový programátor", "počítačový"));
     }
 }

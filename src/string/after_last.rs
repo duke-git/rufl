@@ -43,5 +43,11 @@ mod tests {
         assert_eq!("", after_last("foo", "foo"));
         assert_eq!("foo", after_last("foo", "a"));
         assert_eq!("boo", after_last("foo/bar/boo", "/"));
+
+        assert_eq!("rust", after_last("你好c++你好rust", "你好"));
+        assert_eq!(
+            " programátor",
+            after_last("Jsem počítačový programátor", "počítačový")
+        );
     }
 }
