@@ -114,3 +114,6 @@ pub use is_lowercase::*;
 
 mod is_numeric;
 pub use is_numeric::*;
+
+mod is_digit;
+pub use is_digit::*;
