@@ -23,12 +23,12 @@
 ///
 /// ```
 
-pub fn is_digit(s: impl AsRef<str>) -> bool {
-    match s.as_ref().len() {
+pub fn is_digit(s: &str) -> bool {
+    match s.len() {
         0 => false,
         _ => {
             let digits = "0123456789";
-            for n in crate::string::split_graphemes(s.as_ref()).into_iter() {
+            for n in crate::string::split_graphemes(s).into_iter() {
                 if !digits.contains(n) {
                     return false;
                 }

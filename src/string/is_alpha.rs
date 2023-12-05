@@ -23,8 +23,8 @@
 ///
 /// ```
 
-pub fn is_alpha(s: impl AsRef<str>) -> bool {
-    return s.as_ref().chars().all(|c| c.is_alphabetic());
+pub fn is_alpha(s: &str) -> bool {
+    return s.chars().all(|c| c.is_alphabetic());
 }
 
 #[cfg(test)]

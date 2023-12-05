@@ -23,8 +23,8 @@
 ///
 /// ```
 
-pub fn is_numeric(source_str: impl AsRef<str>) -> bool {
-    if source_str.as_ref().is_empty() {
+pub fn is_numeric(source_str: &str) -> bool {
+    if source_str.is_empty() {
         return false;
     }
 
@@ -35,19 +35,19 @@ pub fn is_numeric(source_str: impl AsRef<str>) -> bool {
         }
     }
 
-    let lower_source: String = source_str.as_ref().to_lowercase();
+    let lower_source: String = source_str.to_lowercase();
 
-    match source_str.as_ref().to_lowercase().find('e') {
+    match source_str.to_lowercase().find('e') {
         Some(_) => {
             let nums: Vec<&str> = lower_source.split('e').collect();
             can_parseable_to_num(nums[0]) && can_parseable_to_num(nums[1])
         }
         None => {
-            if source_str.as_ref().to_lowercase().starts_with("0x") {
+            if source_str.to_lowercase().starts_with("0x") {
                 let s = lower_source.trim_start_matches("0x");
                 i32::from_str_radix(s, 16).is_ok()
             } else {
-                can_parseable_to_num(source_str.as_ref())
+                can_parseable_to_num(source_str)
             }
         }
     }

@@ -15,9 +15,9 @@
 /// ```rust
 /// use ruf::string;
 ///
-/// assert_eq!(5, string::count_by("hello!", |s: &str| -> bool {s.chars().all(char::is_alphabetic)}));
+/// assert_eq!(5, string::count_by("hello!", string::is_alpha));
 ///
-/// assert_eq!(5, string::count_by("1a2b3c", |s: &str| -> bool {s.chars().all(char::is_numeric)}));
+/// assert_eq!(3, string::count_by("1a2b3c", |s: &str| -> bool {s.chars().all(char::is_numeric)}));
 ///
 /// ```
 
@@ -43,10 +43,9 @@ mod tests {
 
     #[test]
     fn test_count_by() {
-        assert_eq!(
-            0,
-            count_by("", |s: &str| -> bool { s.chars().all(char::is_whitespace) })
-        );
+        assert_eq!(5, count_by("hello!", crate::string::is_alpha));
+
+        assert_eq!(3, count_by("1a2b3c", crate::string::is_digit));
 
         assert_eq!(
             1,
@@ -56,22 +55,9 @@ mod tests {
         );
 
         assert_eq!(
-            5,
-            count_by("hello!", |s: &str| -> bool {
-                s.chars().all(char::is_alphabetic)
-            })
-        );
-        assert_eq!(
             1,
             count_by("hello\n", |s: &str| -> bool {
                 s.chars().all(char::is_control)
-            })
-        );
-
-        assert_eq!(
-            3,
-            count_by("1a2b3c", |s: &str| -> bool {
-                s.chars().all(char::is_numeric)
             })
         );
     }

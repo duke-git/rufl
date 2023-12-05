@@ -23,8 +23,8 @@
 ///
 /// ```
 
-pub fn is_alphanumeric(s: impl AsRef<str>) -> bool {
-    return s.as_ref().chars().all(|c| c.is_alphanumeric());
+pub fn is_alphanumeric(s: &str) -> bool {
+    return s.chars().all(|c| c.is_alphanumeric());
 }
 
 #[cfg(test)]

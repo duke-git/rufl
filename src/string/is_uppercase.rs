@@ -23,12 +23,12 @@
 ///
 /// ```
 
-pub fn is_uppercase(s: impl AsRef<str>) -> bool {
-    match s.as_ref().len() {
+pub fn is_uppercase(s: &str) -> bool {
+    match s.len() {
         0 => false,
         _ => {
             let mut is_all_uppercase = true;
-            crate::string::split_graphemes(s.as_ref())
+            crate::string::split_graphemes(s)
                 .into_iter()
                 .for_each(|item| {
                     item.chars().for_each(|c| {
