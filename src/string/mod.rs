@@ -99,3 +99,18 @@ pub use title_case::*;
 
 mod upper_first;
 pub use upper_first::*;
+
+mod is_alpha;
+pub use is_alpha::*;
+
+mod is_alphanumeric;
+pub use is_alphanumeric::*;
+
+mod is_uppercase;
+pub use is_uppercase::*;
+
+mod is_lowercase;
+pub use is_lowercase::*;
+
+mod is_numeric;
+pub use is_numeric::*;
