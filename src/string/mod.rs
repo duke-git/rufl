@@ -117,3 +117,15 @@ pub use is_numeric::*;
 
 mod is_digit;
 pub use is_digit::*;
+
+mod is_ipv4;
+pub use is_ipv4::*;
+
+mod is_ipv6;
+pub use is_ipv6::*;
+
+mod is_email;
+pub use is_email::*;
+
+mod is_url;
+pub use is_url::*;
