@@ -129,3 +129,9 @@ pub use is_email::*;
 
 mod is_url;
 pub use is_url::*;
+
+mod is_dns;
+pub use is_dns::*;
+
+mod is_strong_password;
+pub use is_strong_password::*;
