@@ -30,6 +30,15 @@ pub fn substring(s: impl AsRef<str>, start: usize, end: usize) -> String {
         return String::new();
     }
 
+    // let end = s
+    //     .as_ref()
+    //     .chars()
+    //     .map(|c| c.len_utf8())
+    //     .take(end - start)
+    //     .sum();
+
+    // s.as_ref()[..end].to_string()
+
     s.as_ref().chars().skip(start).take(end - start).collect()
 }
 
@@ -44,5 +53,11 @@ mod tests {
         assert_eq!("a", substring("abcde", 0, 1));
         assert_eq!("ab", substring("abcde", 0, 2));
         assert_eq!("abcde", substring("abcde", 0, 10));
+
+        assert_eq!("żó", substring("żółć", 0, 2));
+        assert_eq!("a̐", substring("a̐éö̲", 0, 2));
+        assert_eq!("你好", substring("你好你好", 0, 2));
+
+        assert_eq!("♥♥", substring("♥♥♥♥♥♥♥♥♥", 0, 2));
     }
 }
