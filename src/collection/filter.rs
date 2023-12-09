@@ -17,9 +17,9 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!([1, 2, 3].to_vec(),collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n <= 3));
+/// assert_eq!([1, 2, 3].to_vec(), collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n <= 3));
 ///
-/// assert_eq!([2, 4].to_vec(),collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n % 2 == 0));
+/// assert_eq!([2, 4].to_vec(), collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n % 2 == 0));
 /// ```
 
 pub fn filter<T: Copy>(collection: Vec<T>, predicate: &dyn Fn(T, usize) -> bool) -> Vec<T> {

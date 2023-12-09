@@ -19,7 +19,8 @@
 ///
 /// assert_eq!([2, 3, 4, 5, 6].to_vec(), collection::map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| { n + 1 }));
 ///
-/// assert_eq!([1, 0, 1, 0, 1].to_vec(), collection::map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n % 2 == 0));
+/// assert_eq!([1, 0, 1, 0, 1].to_vec(), collection::map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n % 2));
+///
 /// ```
 
 pub fn map<T: Copy, U: Copy>(collection: Vec<T>, iteratee: &dyn Fn(T, usize) -> U) -> Vec<U> {
