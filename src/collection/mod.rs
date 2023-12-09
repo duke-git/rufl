@@ -6,3 +6,6 @@ pub use filter::*;
 
 mod map;
 pub use map::*;
+
+mod filter_map;
+pub use filter_map::*;
