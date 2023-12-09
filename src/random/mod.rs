@@ -1,8 +1,8 @@
 //! random mod contains several utility functions for generating random number or string.
 //!
 
-mod numberic_str;
-pub use numberic_str::*;
+mod numberic;
+pub use numberic::*;
 
 mod upper;
 pub use upper::*;
