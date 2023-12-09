@@ -3,3 +3,6 @@
 
 mod filter;
 pub use filter::*;
+
+mod map;
+pub use map::*;
