@@ -10,6 +10,12 @@ pub use none_match::*;
 mod some_match;
 pub use some_match::*;
 
+mod count;
+pub use count::*;
+
+mod count_by;
+pub use count_by::*;
+
 mod filter;
 pub use filter::*;
 
