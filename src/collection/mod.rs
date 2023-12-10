@@ -16,6 +16,12 @@ pub use count::*;
 mod count_by;
 pub use count_by::*;
 
+mod find;
+pub use find::*;
+
+mod find_last;
+pub use find_last::*;
+
 mod filter;
 pub use filter::*;
 
