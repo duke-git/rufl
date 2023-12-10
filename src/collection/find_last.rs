@@ -1,4 +1,4 @@
-/// iterates over elements of collection, returning the last one and its index that pass predicate function.
+/// Iterates over elements of collection, returning the last one and its index that pass predicate function.
 ///
 /// * predicate function signature: ```fn(item: T, index: usize) -> bool```
 ///

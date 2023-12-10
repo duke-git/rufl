@@ -1,4 +1,4 @@
-/// iterates over elements of collection with predicate function, returns the number of all matched elements.
+/// Iterates over elements of collection with predicate function, returns the number of all matched elements.
 ///
 /// * predicate function signature: ```fn(item: &T, index: usize) -> bool```
 ///
