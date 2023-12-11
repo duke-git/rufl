@@ -22,10 +22,7 @@
 /// assert_eq!(3, collection::count_by([1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n % 2 != 0));
 /// ```
 
-pub fn count_by<C: AsRef<[T]>, T: PartialEq>(
-    collection: C,
-    predicate: &dyn Fn(&T, usize) -> bool,
-) -> usize {
+pub fn count_by<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize) -> bool) -> usize {
     let mut count = 0;
 
     for i in 0..collection.as_ref().len() {
