@@ -42,6 +42,7 @@ mod tests {
     #[test]
     fn test_difference() {
         assert_eq!(vec![1], difference([1, 2], [2, 3]));
+        assert_eq!(vec![1, 4], difference(vec![1, 2, 4], vec![2, 3]));
         assert_eq!(vec!["b"], difference(["a", "b"], ["a", "c"]));
     }
 }
