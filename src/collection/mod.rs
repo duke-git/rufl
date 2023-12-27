@@ -33,3 +33,6 @@ pub use filter_map::*;
 
 mod difference;
 pub use difference::*;
+
+mod difference_by;
+pub use difference_by::*;
