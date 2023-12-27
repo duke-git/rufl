@@ -36,3 +36,6 @@ pub use difference::*;
 
 mod difference_by;
 pub use difference_by::*;
+
+mod difference_with;
+pub use difference_with::*;

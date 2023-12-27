@@ -1,7 +1,7 @@
-/// like `difference`` except that it accepts iteratee which is invoked for each element of collection and values to generate the criterion by which they're compared.
+/// like `difference` except that it accepts iteratee which is invoked for each element of collection and values to generate the criterion by which they're compared.
 /// The order and references of result values are determined by the first collection
 ///
-/// * iteratee function signature: ```fn(item:T, index: usize) -> T```
+/// * iteratee function signature: ```fn(item: T, index: usize) -> T```
 ///
 /// # Arguments
 ///
