@@ -30,3 +30,6 @@ pub use map::*;
 
 mod filter_map;
 pub use filter_map::*;
+
+mod difference;
+pub use difference::*;
