@@ -28,11 +28,14 @@ pub fn difference<C: AsRef<[T]>, T: Copy + PartialEq>(
 ) -> Vec<T> {
     let mut result: Vec<T> = Vec::new();
 
+    let compared_vector = compared_collection.as_ref().to_vec();
+
     collection.as_ref().into_iter().for_each(|item| {
-        if !compared_collection.as_ref().contains(item) {
+        if !compared_vector.contains(item) {
             result.push(*item)
         }
     });
+
     return result;
 }
 
