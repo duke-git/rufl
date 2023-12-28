@@ -43,7 +43,7 @@ pub fn filter_map<T: Copy, U: Copy>(
         }
     }
 
-    return result;
+    result
 }
 
 mod tests {

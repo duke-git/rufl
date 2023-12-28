@@ -45,7 +45,7 @@ pub fn difference_by<C: AsRef<[T]>, T: Copy + PartialEq>(
         }
     }
 
-    return result;
+    result
 }
 
 mod tests {

@@ -32,7 +32,7 @@ pub fn filter<T: Copy>(collection: Vec<T>, predicate: &dyn Fn(T, usize) -> bool)
         }
     }
 
-    return result;
+    result
 }
 
 mod tests {

@@ -31,7 +31,7 @@ pub fn map<T: Copy, U: Copy>(collection: Vec<T>, iteratee: &dyn Fn(T, usize) -> 
         result.push(iteratee(val, i));
     }
 
-    return result;
+    result
 }
 
 mod tests {
