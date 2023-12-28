@@ -39,3 +39,9 @@ pub use difference_by::*;
 
 mod difference_with;
 pub use difference_with::*;
+
+mod unique;
+pub use unique::*;
+
+mod unique_by;
+pub use unique_by::*;
