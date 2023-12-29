@@ -45,3 +45,9 @@ pub use unique::*;
 
 mod unique_by;
 pub use unique_by::*;
+
+mod union;
+pub use union::*;
+
+mod union_by;
+pub use union_by::*;
