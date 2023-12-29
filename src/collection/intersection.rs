@@ -1,10 +1,8 @@
-/// Creates a vector of unique elements that included by the two collections.
+/// Creates a vector of unique elements that included by the all collections.
 ///
 /// # Arguments
 ///
-/// * `collection1` - The collection to inspect.
-///
-/// * `collection2` - The collection to inspect.
+/// * `collections` - The collection to inspect.
 ///
 /// # Returns
 ///
@@ -28,7 +26,7 @@ pub fn intersection<C: AsRef<[T]>, T: Clone + PartialEq>(collections: Vec<C>) ->
         return crate::collection::unique(&collections[0]);
     }
 
-    fn reducer<U: Clone + PartialEq>(vector_a: &Vec<U>, vector_b: &Vec<U>) -> Vec<U> {
+    fn reduce_intersection<U: Clone + PartialEq>(vector_a: &Vec<U>, vector_b: &Vec<U>) -> Vec<U> {
         let mut vector = Vec::new();
 
         for item in vector_a {
@@ -40,7 +38,7 @@ pub fn intersection<C: AsRef<[T]>, T: Clone + PartialEq>(collections: Vec<C>) ->
         crate::collection::unique(vector)
     }
 
-    let mut result = reducer(
+    let mut result = reduce_intersection(
         &collections[0].as_ref().to_vec(),
         &collections[1].as_ref().to_vec(),
     );
@@ -51,7 +49,7 @@ pub fn intersection<C: AsRef<[T]>, T: Clone + PartialEq>(collections: Vec<C>) ->
         reduce_vectors.push(result);
         reduce_vectors.push(collections[i].as_ref().to_vec());
 
-        result = reducer(&reduce_vectors[0], &reduce_vectors[1]);
+        result = reduce_intersection(&reduce_vectors[0], &reduce_vectors[1]);
     }
 
     result
