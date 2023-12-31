@@ -54,3 +54,6 @@ pub use union_by::*;
 
 mod intersection;
 pub use intersection::*;
+
+mod shuffle;
+pub use shuffle::*;
