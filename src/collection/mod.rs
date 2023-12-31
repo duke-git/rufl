@@ -57,3 +57,6 @@ pub use intersection::*;
 
 mod shuffle;
 pub use shuffle::*;
+
+mod reduce;
+pub use reduce::*;
