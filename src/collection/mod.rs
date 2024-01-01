@@ -60,3 +60,6 @@ pub use shuffle::*;
 
 mod reduce;
 pub use reduce::*;
+
+mod reduce_right;
+pub use reduce_right::*;

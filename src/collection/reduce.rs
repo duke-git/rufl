@@ -27,17 +27,17 @@
 ///
 /// ```
 
-pub fn reduce<C: AsRef<[T]>, T: Copy, U: Copy>(
+pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
     collection: C,
     accumulator: &dyn Fn(U, T, usize) -> U,
     initial: &U,
 ) -> U {
     let vector = collection.as_ref().to_vec();
 
-    let mut result = *initial;
+    let mut result = (*initial).clone();
 
     for i in 0..vector.len() {
-        result = accumulator(result, vector[i], i)
+        result = accumulator(result, vector[i].clone(), i)
     }
 
     result
@@ -47,7 +47,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_filter() {
+    fn test_reduce() {
         assert_eq!(
             15,
             reduce(
