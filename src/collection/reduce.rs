@@ -1,7 +1,7 @@
 /// Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee,
 /// where each successive invocation is supplied the return value of the previous.
 ///
-/// * accumulator function signature: ```fn(item: T, item: T, index: usize) -> T```
+/// * accumulator function signature: ```fn(agg: U, item: T, index: usize) -> U```
 ///
 /// # Arguments
 ///
@@ -27,11 +27,11 @@
 ///
 /// ```
 
-pub fn reduce<C: AsRef<[T]>, T: Copy>(
+pub fn reduce<C: AsRef<[T]>, T: Copy, U: Copy>(
     collection: C,
-    accumulator: &dyn Fn(T, T, usize) -> T,
-    initial: &T,
-) -> T {
+    accumulator: &dyn Fn(U, T, usize) -> U,
+    initial: &U,
+) -> U {
     let vector = collection.as_ref().to_vec();
 
     let mut result = *initial;
