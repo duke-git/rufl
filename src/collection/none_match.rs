@@ -33,6 +33,7 @@ pub fn none_match<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize)
     true
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -1,5 +1,3 @@
-use std::{borrow::Borrow, ops::Index};
-
 /// Returns a vector of shuffled values
 ///
 /// # Arguments
@@ -33,6 +31,7 @@ pub fn shuffle<T: Copy>(collection: &Vec<T>) -> Vec<T> {
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

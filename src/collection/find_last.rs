@@ -50,6 +50,7 @@ pub fn find_last<C: AsRef<[T]>, T: Copy>(
     None
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

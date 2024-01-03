@@ -43,6 +43,7 @@ pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 
@@ -52,7 +53,7 @@ mod tests {
             15,
             reduce(
                 vec![1, 2, 3, 4, 5],
-                &|x: i32, y: i32, i: usize| { x + y },
+                &|x: i32, y: i32, _: usize| { x + y },
                 &0
             )
         );
@@ -61,7 +62,7 @@ mod tests {
             120,
             reduce(
                 vec![1, 2, 3, 4, 5],
-                &|x: i32, y: i32, i: usize| { x * y },
+                &|x: i32, y: i32, _: usize| { x * y },
                 &1
             )
         );

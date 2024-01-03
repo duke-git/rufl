@@ -54,7 +54,7 @@ pub fn difference_with<C: AsRef<[T]>, T: Copy + PartialEq>(
         let index_op = get_index(&compared_vector, item, comparator);
 
         match index_op {
-            Some(index) => {}
+            Some(_) => {}
             None => result.push(vector[i]),
         }
     }
@@ -62,6 +62,7 @@ pub fn difference_with<C: AsRef<[T]>, T: Copy + PartialEq>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

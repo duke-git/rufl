@@ -27,7 +27,7 @@ pub fn split_words(s: impl AsRef<str>) -> Vec<String> {
 
     let mut word_list: Vec<Vec<String>> = Vec::new();
 
-    let mut char_type: usize = 0;
+    let mut char_type;
     let mut last_char_type: usize = 0;
 
     for (_, c) in s.as_ref().chars().enumerate() {

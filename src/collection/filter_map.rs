@@ -46,6 +46,7 @@ pub fn filter_map<T: Copy, U: Copy>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

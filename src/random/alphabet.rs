@@ -26,6 +26,7 @@ pub fn alphabet(length: usize) -> String {
     generate::generate_str("LETTER", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

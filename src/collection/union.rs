@@ -54,6 +54,7 @@ pub fn union<C: AsRef<[T]>, T: Clone + PartialEq>(collections: Vec<C>) -> Vec<T>
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -49,6 +49,6 @@ mod tests {
         assert_eq!("bb".to_string(), foo3);
 
         let foo4 = removen("abab", "a", 3);
-        assert_eq!("bb".to_string(), foo3);
+        assert_eq!("bb".to_string(), foo4);
     }
 }

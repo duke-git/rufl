@@ -13,7 +13,7 @@
 ///
 
 pub(super) fn generate_str(char_type: &str, length: usize) -> String {
-    let mut chars = "";
+    let chars;
 
     match char_type {
         "NUMBER" => chars = crate::random::NUMBERS,

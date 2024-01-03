@@ -34,6 +34,7 @@ pub fn count<C: AsRef<[T]>, T: PartialEq>(collection: &C, item: T) -> usize {
     count
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

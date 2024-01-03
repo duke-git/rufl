@@ -20,7 +20,6 @@ mod symbol;
 pub use symbol::*;
 
 mod generate;
-use generate::*;
 
 static NUMBERS: &str = "0123456789";
 static LOWER_LETTERS: &str = "abcdefghijklmnopqrstuvwxyz";

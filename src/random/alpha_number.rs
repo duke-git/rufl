@@ -26,6 +26,7 @@ pub fn alpha_number(length: usize) -> String {
     generate::generate_str("ALPHANUMERIC", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

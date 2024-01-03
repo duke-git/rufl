@@ -55,6 +55,7 @@ pub fn intersection<C: AsRef<[T]>, T: Clone + PartialEq>(collections: Vec<C>) ->
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

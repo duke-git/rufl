@@ -34,6 +34,7 @@ pub fn map<T: Copy, U: Copy>(collection: Vec<T>, iteratee: &dyn Fn(T, usize) -> 
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

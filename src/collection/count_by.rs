@@ -35,6 +35,7 @@ pub fn count_by<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize) -
     count
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

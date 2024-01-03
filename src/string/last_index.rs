@@ -26,14 +26,15 @@
 /// ```
 
 pub fn last_index(s: impl AsRef<str>, search: &str, position: usize) -> i32 {
-    let mut substring = "";
+    let sub_string;
+
     if s.as_ref().chars().count() <= position {
-        substring = s.as_ref();
+        sub_string = s.as_ref();
     } else {
-        substring = &s.as_ref()[..s.as_ref().char_indices().nth(position).unwrap().0];
+        sub_string = &s.as_ref()[..s.as_ref().char_indices().nth(position).unwrap().0];
     }
 
-    match substring.rfind(search) {
+    match sub_string.rfind(search) {
         Some(i) => i as i32,
         None => -1,
     }

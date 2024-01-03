@@ -1,5 +1,3 @@
-use std::collections::HashMap;
-
 /// Creates a vector of unique elements between two collections.
 /// it accepts iteratee which is invoked for each element of each collection to generate the criterion by which uniqueness is computed.
 ///
@@ -55,6 +53,7 @@ pub fn union_by<C: AsRef<[T]>, T: Clone + PartialEq>(
     unique_vector
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -40,6 +40,7 @@ pub fn reduce_right<C: AsRef<[T]>, T: Clone, U: Clone>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 
@@ -49,7 +50,7 @@ mod tests {
             vec![4, 5, 2, 3, 0, 1],
             reduce_right(
                 vec![vec![0, 1], vec![2, 3], vec![4, 5]],
-                &|agg: Vec<i32>, item: Vec<i32>, i: usize| { [agg, item].concat() },
+                &|agg: Vec<i32>, item: Vec<i32>, _: usize| { [agg, item].concat() },
                 &Vec::new()
             )
         );

@@ -26,6 +26,7 @@ pub fn upper(length: usize) -> String {
     generate::generate_str("UPPER", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

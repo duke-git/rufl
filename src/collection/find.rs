@@ -44,6 +44,7 @@ pub fn find<C: AsRef<[T]>, T: Copy>(
     None
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

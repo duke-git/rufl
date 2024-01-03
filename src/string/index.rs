@@ -1,5 +1,3 @@
-use std::iter;
-
 /// Searches a string and returns the index of the first occurrence of the specified searched substring.
 ///
 /// # Arguments

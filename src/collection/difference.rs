@@ -39,6 +39,7 @@ pub fn difference<C: AsRef<[T]>, T: Copy + PartialEq>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

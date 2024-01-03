@@ -48,12 +48,13 @@ pub fn difference_by<C: AsRef<[T]>, T: Copy + PartialEq>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 
     #[test]
     fn test_difference_by() {
-        fn floor(value: f64, index: usize) -> f64 {
+        fn floor(value: f64, _: usize) -> f64 {
             value.floor()
         }
         assert_eq!(vec![1.2], difference_by([1.2, 2.1], [2.3, 3.4], &floor));

@@ -26,6 +26,7 @@ pub fn numberic(length: usize) -> String {
     generate::generate_str("NUMBER", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

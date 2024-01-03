@@ -23,6 +23,7 @@ pub fn unique<C: AsRef<[T]>, T: Clone + PartialEq>(collection: C) -> Vec<T> {
     crate::collection::unique_by(collection, &|v1, v2| v1 == v2)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

@@ -29,6 +29,7 @@ pub fn symbol(length: usize) -> String {
     generate::generate_str("SYMBOL", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

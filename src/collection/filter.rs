@@ -35,6 +35,7 @@ pub fn filter<T: Copy>(collection: Vec<T>, predicate: &dyn Fn(T, usize) -> bool)
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

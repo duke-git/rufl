@@ -40,6 +40,7 @@ pub fn unique_by<C: AsRef<[T]>, T: Clone + PartialEq>(
     result
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 

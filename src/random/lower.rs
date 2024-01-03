@@ -26,6 +26,7 @@ pub fn lower(length: usize) -> String {
     generate::generate_str("LOWER", length)
 }
 
+#[cfg(test)]
 mod tests {
     use super::*;
 
