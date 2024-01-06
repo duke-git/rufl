@@ -66,3 +66,6 @@ pub use reduce_right::*;
 
 mod index_of;
 pub use index_of::*;
+
+mod last_index_of;
+pub use last_index_of::*;
