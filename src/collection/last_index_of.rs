@@ -1,4 +1,4 @@
-/// Returns returns the index at which the last occurrence of a element is found in the collection.
+/// Returns the index at which the last occurrence of a element is found in the collection.
 ///
 ///
 /// # Arguments
@@ -9,7 +9,7 @@
 ///
 /// # Returns
 ///
-/// Returns index of last occurrence of the given element.
+/// Index of last occurrence of the given element.
 ///
 /// # Examples
 ///

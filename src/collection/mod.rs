@@ -72,3 +72,6 @@ pub use last_index_of::*;
 
 mod max;
 pub use max::*;
+
+mod min;
+pub use min::*;

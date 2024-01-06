@@ -8,7 +8,7 @@
 ///
 /// # Returns
 ///
-/// Returns the maximum value of a collection..
+/// The maximum value of a collection..
 ///
 /// # Examples
 ///
