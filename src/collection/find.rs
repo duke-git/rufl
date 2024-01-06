@@ -25,7 +25,7 @@
 /// assert_eq!(Some((3, 2)), collection::find([1, 2, 3, 4, 5], &|n: &i32, _i: usize| *n % 2 != 0, 2));
 /// ```
 
-pub fn find<C: AsRef<[T]>, T: Copy>(
+pub fn find<C: AsRef<[T]>, T: Clone>(
     collection: C,
     predicate: &dyn Fn(&T, usize) -> bool,
     find_from: usize,
@@ -35,9 +35,9 @@ pub fn find<C: AsRef<[T]>, T: Copy>(
     }
 
     for i in find_from..collection.as_ref().len() {
-        let val = &collection.as_ref()[i];
-        if predicate(val, i) {
-            return Some((*val, i));
+        let item = &collection.as_ref()[i];
+        if predicate(item, i) {
+            return Some((item.clone(), i));
         }
     }
 

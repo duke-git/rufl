@@ -1,6 +1,6 @@
 /// Creates new collection of element by running each element in collection thru iteratee.
 ///
-/// * iteratee function signature: ```fn(item:T, index: usize) -> U```
+/// * iteratee function signature: ```fn(item: &T, index: usize) -> U```
 ///
 /// # Arguments
 ///
@@ -17,18 +17,18 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!([2, 3, 4, 5, 6].to_vec(), collection::map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| { n + 1 }));
+/// assert_eq!(vec![2, 3, 4, 5, 6], collection::map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 }));
 ///
-/// assert_eq!([1, 0, 1, 0, 1].to_vec(), collection::map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| n % 2));
+/// assert_eq!(vec![1, 0, 1, 0, 1], collection::map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 }));
 ///
 /// ```
 
-pub fn map<T: Copy, U: Copy>(collection: Vec<T>, iteratee: &dyn Fn(T, usize) -> U) -> Vec<U> {
+pub fn map<T: Clone, U: Clone>(collection: Vec<T>, iteratee: &dyn Fn(&T, usize) -> U) -> Vec<U> {
     let mut result: Vec<U> = Vec::new();
 
     for i in 0..collection.len() {
-        let val = collection[i];
-        result.push(iteratee(val, i));
+        let item = &collection[i];
+        result.push(iteratee(item, i));
     }
 
     result
@@ -41,13 +41,13 @@ mod tests {
     #[test]
     fn test_filter() {
         assert_eq!(
-            [2, 3, 4, 5, 6].to_vec(),
-            map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| { n + 1 })
+            vec! [2, 3, 4, 5, 6],
+            map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 })
         );
 
         assert_eq!(
-            [1, 0, 1, 0, 1].to_vec(),
-            map([1, 2, 3, 4, 5].to_vec(), &|n: i32, _i: usize| { n % 2 })
+            vec![1, 0, 1, 0, 1],
+            map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 })
         );
     }
 }

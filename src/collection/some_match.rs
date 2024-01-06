@@ -17,15 +17,15 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!(true, collection::some_match([1, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3));
+/// assert_eq!(true, collection::some_match(&[1, 4, 5], &|n: &i32, _i: usize| *n <= 3));
 ///
-/// assert_eq!(false, collection::some_match([1, 2, 3].to_vec(), &|n: &i32, _i: usize| *n > 3));
+/// assert_eq!(false, collection::some_match(&vec![1, 2, 3], &|n: &i32, _i: usize| *n > 3));
 /// ```
 
-pub fn some_match<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
+pub fn some_match<C: AsRef<[T]>, T>(collection: &C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
     for i in 0..collection.as_ref().len() {
-        let val = &collection.as_ref()[i];
-        if predicate(val, i) {
+        let item = &collection.as_ref()[i];
+        if predicate(item, i) {
             return true;
         }
     }
@@ -41,12 +41,12 @@ mod tests {
     fn test_some_match() {
         assert_eq!(
             true,
-            some_match([1, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3)
+            some_match(&[1, 4, 5], &|n: &i32, _i: usize| *n <= 3)
         );
 
         assert_eq!(
             false,
-            some_match([1, 2, 3].to_vec(), &|n: &i32, _i: usize| *n > 3)
+            some_match(&vec![1, 2, 3], &|n: &i32, _i: usize| *n > 3)
         );
     }
 }

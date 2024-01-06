@@ -26,8 +26,8 @@ pub fn count_by<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize) -
     let mut count = 0;
 
     for i in 0..collection.as_ref().len() {
-        let val = &collection.as_ref()[i];
-        if predicate(val, i) {
+        let item = &collection.as_ref()[i];
+        if predicate(item, i) {
             count += 1;
         }
     }
