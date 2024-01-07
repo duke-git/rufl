@@ -78,3 +78,6 @@ pub use min::*;
 
 mod insert_at;
 pub use insert_at::*;
+
+mod repalce_all;
+pub use repalce_all::*;
