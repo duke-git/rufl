@@ -81,3 +81,6 @@ pub use insert_at::*;
 
 mod repalce_all;
 pub use repalce_all::*;
+
+mod remove_all;
+pub use remove_all::*;
