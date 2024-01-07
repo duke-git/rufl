@@ -75,3 +75,6 @@ pub use max::*;
 
 mod min;
 pub use min::*;
+
+mod insert_at;
+pub use insert_at::*;
