@@ -27,7 +27,7 @@
 /// 
 /// ```
 
-pub fn insert_at<T:Default>(vec: &mut Vec<T>, index: usize, item: T) -> Result<bool, String> {
+pub fn insert_at<T>(vec: &mut Vec<T>, index: usize, item: T) -> Result<bool, String> {
     if index > vec.len() {
         return Err(String::from("insert_at: index should be <= vecor length"));
     }
