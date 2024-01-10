@@ -30,12 +30,15 @@ pub fn find<C: AsRef<[T]>, T: Clone>(
     predicate: &dyn Fn(&T, usize) -> bool,
     find_from: usize,
 ) -> Option<(T, usize)> {
-    if find_from > collection.as_ref().len() - 1 {
+    let vec = collection.as_ref();
+
+    if find_from > vec.len() - 1 {
         return None;
     }
 
-    for i in find_from..collection.as_ref().len() {
-        let item = &collection.as_ref()[i];
+    for i in find_from..vec.len() {
+        let item = &vec.as_ref()[i];
+
         if predicate(item, i) {
             return Some((item.clone(), i));
         }

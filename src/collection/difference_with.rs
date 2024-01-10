@@ -46,7 +46,7 @@ pub fn difference_with<C: AsRef<[T]>, T: Copy + PartialEq>(
         None
     }
 
-    let vector = collection.as_ref().to_vec();
+    let vector = collection.as_ref();
     let compared_vector = compared_collection.as_ref().to_vec();
 
     for i in 0..vector.len() {

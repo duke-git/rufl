@@ -30,7 +30,9 @@ pub fn find_last<C: AsRef<[T]>, T: Clone>(
     predicate: &dyn Fn(&T, usize) -> bool,
     find_from: usize,
 ) -> Option<(T, usize)> {
-    if find_from > collection.as_ref().len() - 1 {
+    let vec = collection.as_ref();
+
+    if find_from > vec.len() - 1 {
         return None;
     }
 
@@ -41,7 +43,7 @@ pub fn find_last<C: AsRef<[T]>, T: Clone>(
     }
 
     for i in 0..find_end {
-        let item = &collection.as_ref()[find_from - i];
+        let item = &vec[find_from - i];
         if predicate(item, find_from - i) {
             return Some((item.clone(), find_from - i));
         }

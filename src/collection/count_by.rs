@@ -24,10 +24,10 @@
 
 pub fn count_by<C: AsRef<[T]>, T>(collection: C, predicate: &dyn Fn(&T, usize) -> bool) -> usize {
     let mut count = 0;
+    let vec = collection.as_ref();
 
-    for i in 0..collection.as_ref().len() {
-        let item = &collection.as_ref()[i];
-        if predicate(item, i) {
+    for i in 0..vec.len() {
+        if predicate(&vec[i], i) {
             count += 1;
         }
     }

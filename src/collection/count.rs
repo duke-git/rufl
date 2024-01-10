@@ -23,10 +23,10 @@
 
 pub fn count<C: AsRef<[T]>, T: PartialEq>(collection: &C, item: T) -> usize {
     let mut count = 0;
+    let vec = collection.as_ref();
 
-    for i in 0..collection.as_ref().len() {
-        let val = &collection.as_ref()[i];
-        if *val == item {
+    for i in 0..vec.len() {
+        if &vec[i] == &item {
             count += 1;
         }
     }

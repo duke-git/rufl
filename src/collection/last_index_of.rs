@@ -22,9 +22,12 @@
 ///
 /// ```
 
-pub fn last_index_of<C: AsRef<[T]>, T: PartialEq + Clone>(collection: &C, item: &T) -> Option<usize> {
-    
-    let vector =  collection.as_ref().to_vec();
+pub fn last_index_of<C: AsRef<[T]>, T: PartialEq + Clone>(
+    collection: &C,
+    item: &T,
+) -> Option<usize> {
+    let vector = collection.as_ref();
+
     for i in (0..vector.len()).rev() {
         if vector[i] == *item {
             return Some(i);

@@ -23,9 +23,10 @@
 /// ```
 
 pub fn none_match<C: AsRef<[T]>, T>(collection: &C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
-    for i in 0..collection.as_ref().len() {
-        let item = &collection.as_ref()[i];
-        if predicate(item, i) {
+    let vec = collection.as_ref();
+
+    for i in 0..vec.len() {
+        if predicate(&vec[i], i) {
             return false;
         }
     }

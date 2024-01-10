@@ -35,7 +35,7 @@ pub fn difference_by<C: AsRef<[T]>, T: Clone + PartialEq>(
     let c1 = crate::collection::map(collection.as_ref().to_vec(), iteratee);
     let c2 = crate::collection::map(compared_collection.as_ref().to_vec(), iteratee);
 
-    let vector = collection.as_ref().to_vec();
+    let vector = collection.as_ref();
 
     for i in 0..c1.len() {
         let item = &c1[i];

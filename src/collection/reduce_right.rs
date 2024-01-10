@@ -29,7 +29,7 @@ pub fn reduce_right<C: AsRef<[T]>, T: Clone, U: Clone>(
     accumulator: &dyn Fn(U, T, usize) -> U,
     initial: &U,
 ) -> U {
-    let vector = collection.as_ref().to_vec();
+    let vector = collection.as_ref();
 
     let mut result = (*initial).clone();
 

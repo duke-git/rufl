@@ -27,8 +27,7 @@ pub fn map<T: Clone, U: Clone>(collection: Vec<T>, iteratee: &dyn Fn(&T, usize) 
     let mut result: Vec<U> = Vec::new();
 
     for i in 0..collection.len() {
-        let item = &collection[i];
-        result.push(iteratee(item, i));
+        result.push(iteratee(&collection[i], i));
     }
 
     result
@@ -41,7 +40,7 @@ mod tests {
     #[test]
     fn test_filter() {
         assert_eq!(
-            vec! [2, 3, 4, 5, 6],
+            vec![2, 3, 4, 5, 6],
             map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 })
         );
 

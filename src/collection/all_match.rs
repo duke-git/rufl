@@ -23,9 +23,10 @@
 /// ```
 
 pub fn all_match<C: AsRef<[T]>, T>(collection: &C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
-    for i in 0..collection.as_ref().len() {
-        let item = &collection.as_ref()[i];
-        if !predicate(item, i) {
+    let vec = collection.as_ref();
+
+    for i in 0..vec.len() {
+        if !predicate(&vec[i], i) {
             return false;
         }
     }
@@ -39,10 +40,7 @@ mod tests {
 
     #[test]
     fn test_all_match() {
-        assert_eq!(
-            true,
-            all_match(&[1, 2, 3], &|n: &i32, _i: usize| *n <= 3)
-        );
+        assert_eq!(true, all_match(&[1, 2, 3], &|n: &i32, _i: usize| *n <= 3));
 
         assert_eq!(
             false,
