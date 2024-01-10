@@ -96,3 +96,6 @@ pub use is_ascending_order::*;
 
 mod is_descending_order;
 pub use is_descending_order::*;
+
+mod is_sorted;
+pub use is_sorted::*;
