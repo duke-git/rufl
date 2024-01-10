@@ -93,3 +93,6 @@ pub use fill::*;
 
 mod is_ascending_order;
 pub use is_ascending_order::*;
+
+mod is_descending_order;
+pub use is_descending_order::*;
