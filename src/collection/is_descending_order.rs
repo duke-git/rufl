@@ -22,9 +22,7 @@ pub fn is_descending_order<C: AsRef<[T]>, T: Ord>(collection: &C) -> bool {
     let vec = collection.as_ref();
 
     for i in 1..vec.len() {
-        let item1 = &vec[i - 1];
-        let item2 = &vec[i];
-        if item1 < item2 {
+        if &vec[i - 1] < &vec[i] {
             return false;
         }
     }
