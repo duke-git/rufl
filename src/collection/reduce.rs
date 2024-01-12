@@ -29,7 +29,7 @@
 
 pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
     collection: C,
-    accumulator: &dyn Fn(U, T, usize) -> U,
+    accumulator: impl Fn(U, T, usize) -> U,
     initial: &U,
 ) -> U {
     let vector = collection.as_ref();

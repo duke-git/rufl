@@ -29,7 +29,7 @@
 pub fn union_by<C: AsRef<[T]>, T: Clone + PartialEq>(
     collection1: C,
     collection2: C,
-    iteratee: &dyn Fn(&T) -> T,
+    iteratee: impl Fn(&T) -> T,
 ) -> Vec<T> {
     let merged_vector = [collection1.as_ref().to_vec(), collection2.as_ref().to_vec()].concat();
 

@@ -25,7 +25,7 @@
 ///
 pub fn unique_by<C: AsRef<[T]>, T: Clone + PartialEq>(
     collection: C,
-    comparator: &dyn Fn(&T, &T) -> bool,
+    comparator: impl Fn(&T, &T) -> bool,
 ) -> Vec<T> {
     let mut result = collection.as_ref().to_vec().clone();
 

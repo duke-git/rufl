@@ -17,17 +17,17 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!(vec![2, 3, 4, 5, 6], collection::map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 }));
+/// assert_eq!(vec![2, 3, 4, 5, 6], collection::map(&vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 }));
 ///
-/// assert_eq!(vec![1, 0, 1, 0, 1], collection::map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 }));
+/// assert_eq!(vec![1, 0, 1, 0, 1], collection::map(&vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 }));
 ///
 /// ```
 
-pub fn map<T: Clone, U: Clone>(collection: Vec<T>, iteratee: &dyn Fn(&T, usize) -> U) -> Vec<U> {
+pub fn map<T, U>(vector: &Vec<T>, iteratee: impl Fn(&T, usize) -> U) -> Vec<U> {
     let mut result: Vec<U> = Vec::new();
 
-    for i in 0..collection.len() {
-        result.push(iteratee(&collection[i], i));
+    for (index, item) in vector.iter().enumerate() {
+        result.push(iteratee(item, index));
     }
 
     result
@@ -41,12 +41,12 @@ mod tests {
     fn test_filter() {
         assert_eq!(
             vec![2, 3, 4, 5, 6],
-            map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 })
+            map(&vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n + 1 })
         );
 
         assert_eq!(
             vec![1, 0, 1, 0, 1],
-            map(vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 })
+            map(&vec![1, 2, 3, 4, 5], &|n: &i32, _i: usize| { *n % 2 })
         );
     }
 }

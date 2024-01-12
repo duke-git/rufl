@@ -27,14 +27,14 @@
 pub fn difference_with<C: AsRef<[T]>, T: Copy + PartialEq>(
     collection: C,
     compared_collection: C,
-    comparator: &dyn Fn(T, T) -> bool,
+    comparator: impl Fn(T, T) -> bool,
 ) -> Vec<T> {
     let mut result: Vec<T> = Vec::new();
 
     fn get_index<U: Copy>(
         vector: &Vec<U>,
         item: U,
-        comparison: &dyn Fn(U, U) -> bool,
+        comparison: impl Fn(U, U) -> bool,
     ) -> Option<usize> {
         for i in 0..vector.len() {
             let val = vector[i];
@@ -51,7 +51,7 @@ pub fn difference_with<C: AsRef<[T]>, T: Copy + PartialEq>(
 
     for i in 0..vector.len() {
         let item = vector[i];
-        let index_op = get_index(&compared_vector, item, comparator);
+        let index_op = get_index(&compared_vector, item, &comparator);
 
         match index_op {
             Some(_) => {}

@@ -32,7 +32,7 @@
 
 pub fn filter_map<T: Copy, U: Copy>(
     collection: Vec<T>,
-    iteratee: &dyn Fn(T, usize) -> (U, bool),
+    iteratee: impl Fn(T, usize) -> (U, bool),
 ) -> Vec<U> {
     let mut result: Vec<U> = Vec::new();
 

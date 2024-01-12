@@ -27,7 +27,7 @@
 
 pub fn find<C: AsRef<[T]>, T: Clone>(
     collection: C,
-    predicate: &dyn Fn(&T, usize) -> bool,
+    predicate: impl Fn(&T, usize) -> bool,
     find_from: usize,
 ) -> Option<(T, usize)> {
     let vec = collection.as_ref();

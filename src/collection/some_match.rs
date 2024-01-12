@@ -22,7 +22,7 @@
 /// assert_eq!(false, collection::some_match(&vec![1, 2, 3], &|n: &i32, _i: usize| *n > 3));
 /// ```
 
-pub fn some_match<C: AsRef<[T]>, T>(collection: &C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
+pub fn some_match<C: AsRef<[T]>, T>(collection: &C, predicate: impl Fn(&T, usize) -> bool) -> bool {
     let vec = collection.as_ref();
 
     for i in 0..vec.len() {

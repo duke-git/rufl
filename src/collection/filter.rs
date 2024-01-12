@@ -17,17 +17,16 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!([1, 2, 3].to_vec(), collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3));
+/// assert_eq!([1, 2, 3].to_vec(), collection::filter(&[1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3));
 ///
-/// assert_eq!([2, 4].to_vec(), collection::filter([1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| n % 2 == 0));
+/// assert_eq!([2, 4].to_vec(), collection::filter(&[1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| n % 2 == 0));
 /// ```
 
-pub fn filter<T: Clone>(collection: Vec<T>, predicate: &dyn Fn(&T, usize) -> bool) -> Vec<T> {
+pub fn filter<T: Clone>(vector: &Vec<T>, predicate: impl Fn(&T, usize) -> bool) -> Vec<T> {
     let mut result: Vec<T> = Vec::new();
 
-    for i in 0..collection.len() {
-        let item = &collection[i];
-        if predicate(item, i) {
+    for (index, item) in vector.iter().enumerate() {
+        if predicate(item, index) {
             result.push(item.clone());
         }
     }
@@ -43,12 +42,12 @@ mod tests {
     fn test_filter() {
         assert_eq!(
             [1, 2, 3].to_vec(),
-            filter([1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3)
+            filter(&[1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3)
         );
 
         assert_eq!(
             [2, 4].to_vec(),
-            filter([1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| n % 2 == 0)
+            filter(&[1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| n % 2 == 0)
         );
     }
 }

@@ -32,8 +32,8 @@ pub fn difference_by<C: AsRef<[T]>, T: Clone + PartialEq>(
 ) -> Vec<T> {
     let mut result: Vec<T> = Vec::new();
 
-    let c1 = crate::collection::map(collection.as_ref().to_vec(), iteratee);
-    let c2 = crate::collection::map(compared_collection.as_ref().to_vec(), iteratee);
+    let c1 = crate::collection::map(&collection.as_ref().to_vec(), iteratee);
+    let c2 = crate::collection::map(&compared_collection.as_ref().to_vec(), iteratee);
 
     let vector = collection.as_ref();
 

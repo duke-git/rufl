@@ -22,7 +22,7 @@
 /// assert_eq!(false, collection::none_match(&vec![1, 2, 3], &|n: &i32, _i: usize| *n % 2 == 0));
 /// ```
 
-pub fn none_match<C: AsRef<[T]>, T>(collection: &C, predicate: &dyn Fn(&T, usize) -> bool) -> bool {
+pub fn none_match<C: AsRef<[T]>, T>(collection: &C, predicate: impl Fn(&T, usize) -> bool) -> bool {
     let vec = collection.as_ref();
 
     for i in 0..vec.len() {
