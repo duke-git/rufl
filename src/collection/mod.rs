@@ -99,3 +99,6 @@ pub use is_descending_order::*;
 
 mod is_sorted;
 pub use is_sorted::*;
+
+mod partition;
+pub use partition::*;

@@ -42,30 +42,6 @@ pub fn reduce<C: AsRef<[T]>, T, U>(
     result
 }
 
-// pub fn reduce<T, U>(vector: &Vec<T>, initial: U, function: impl Fn(&U, &T) -> U) -> U {
-//     let mut accumulator = initial;
-//     for item in vector {
-//         accumulator = function(&accumulator, &item);
-//     }
-//     return accumulator;
-// }
-
-// pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
-//     collection: &C,
-//     accumulator: impl Fn(U, T, usize) -> U,
-//     initial: &U,
-// ) -> U {
-//     let vector = collection.as_ref();
-
-//     let mut result = (*initial).clone();
-
-//     for i in 0..vector.len() {
-//         result = accumulator(result, vector[i].clone(), i)
-//     }
-
-//     result
-// }
-
 #[cfg(test)]
 mod tests {
     use super::*;
