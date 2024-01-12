@@ -21,27 +21,50 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!(15, collection::reduce(vec![1, 2, 3, 4, 5], &|x: i32, y: i32, i: usize| { x + y }, &0));
+/// assert_eq!(15, collection::reduce(&vec![1, 2, 3, 4, 5], |x: &i32, y: &i32, i: usize| { x + y }, 0));
 ///
-/// assert_eq!(120, collection::reduce(vec![1, 2, 3, 4, 5], &|x: i32, y: i32, i: usize| { x * y }, &1));
+/// assert_eq!(120, collection::reduce(&vec![1, 2, 3, 4, 5], |x: &i32, y: &i32, i: usize| { x * y }, 1));
 ///
 /// ```
 
-pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
-    collection: C,
-    accumulator: impl Fn(U, T, usize) -> U,
-    initial: &U,
+pub fn reduce<C: AsRef<[T]>, T, U>(
+    collection: &C,
+    accumulator: impl Fn(&U, &T, usize) -> U,
+    initial: U,
 ) -> U {
+    let mut result = initial;
+
     let vector = collection.as_ref();
-
-    let mut result = (*initial).clone();
-
-    for i in 0..vector.len() {
-        result = accumulator(result, vector[i].clone(), i)
+    for (index, item) in vector.iter().enumerate() {
+        result = accumulator(&result, item, index)
     }
 
     result
 }
+
+// pub fn reduce<T, U>(vector: &Vec<T>, initial: U, function: impl Fn(&U, &T) -> U) -> U {
+//     let mut accumulator = initial;
+//     for item in vector {
+//         accumulator = function(&accumulator, &item);
+//     }
+//     return accumulator;
+// }
+
+// pub fn reduce<C: AsRef<[T]>, T: Clone, U: Clone>(
+//     collection: &C,
+//     accumulator: impl Fn(U, T, usize) -> U,
+//     initial: &U,
+// ) -> U {
+//     let vector = collection.as_ref();
+
+//     let mut result = (*initial).clone();
+
+//     for i in 0..vector.len() {
+//         result = accumulator(result, vector[i].clone(), i)
+//     }
+
+//     result
+// }
 
 #[cfg(test)]
 mod tests {
@@ -52,18 +75,18 @@ mod tests {
         assert_eq!(
             15,
             reduce(
-                vec![1, 2, 3, 4, 5],
-                &|x: i32, y: i32, _: usize| { x + y },
-                &0
+                &vec![1, 2, 3, 4, 5],
+                |x: &i32, y: &i32, _: usize| { x + y },
+                0
             )
         );
 
         assert_eq!(
             120,
             reduce(
-                vec![1, 2, 3, 4, 5],
-                &|x: i32, y: i32, _: usize| { x * y },
-                &1
+                &vec![1, 2, 3, 4, 5],
+                |x: &i32, y: &i32, _: usize| { x * y },
+                1
             )
         );
     }

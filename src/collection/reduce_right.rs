@@ -20,21 +20,20 @@
 /// ```
 /// use ruf::collection;
 ///
-/// assert_eq!(vec![4, 5, 2, 3, 0, 1], collection::reduce_right(vec![vec![0, 1], vec![2, 3], vec![4, 5]], &|agg: Vec<i32>, item: Vec<i32>, i: usize| { [agg, item].concat() }, &Vec::new()));
+/// assert_eq!(9, collection::reduce_right(&vec!["hello", "rust"], |agg, item, _: usize| { agg + item.len() }, 0));
 ///
 /// ```
 
-pub fn reduce_right<C: AsRef<[T]>, T: Clone, U: Clone>(
-    collection: C,
-    accumulator: impl Fn(U, T, usize) -> U,
-    initial: &U,
+pub fn reduce_right<C: AsRef<[T]>, T, U>(
+    collection: &C,
+    accumulator: impl Fn(&U, &T, usize) -> U,
+    initial: U,
 ) -> U {
+    let mut result = initial;
+
     let vector = collection.as_ref();
-
-    let mut result = (*initial).clone();
-
     for i in (0..vector.len()).rev() {
-        result = accumulator(result.clone(), vector[i].clone(), i)
+        result = accumulator(&result, &vector[i], i)
     }
 
     result
@@ -42,17 +41,29 @@ pub fn reduce_right<C: AsRef<[T]>, T: Clone, U: Clone>(
 
 #[cfg(test)]
 mod tests {
+    use std::vec;
+
     use super::*;
 
     #[test]
     fn test_reduce_right() {
         assert_eq!(
-            vec![4, 5, 2, 3, 0, 1],
+            9,
             reduce_right(
-                vec![vec![0, 1], vec![2, 3], vec![4, 5]],
-                &|agg: Vec<i32>, item: Vec<i32>, _: usize| { [agg, item].concat() },
-                &Vec::new()
+                &vec!["hello", "rust"],
+                |agg, item, _: usize| { agg + item.len() },
+                0,
             )
         );
+
+        // let empty_vec: Vec<i32> = vec![];
+        // assert_eq!(
+        //     vec![4, 5, 2, 3, 0, 1],
+        //     reduce_right(
+        //         &vec![vec![0, 1], vec![2, 3], vec![4, 5]],
+        //         |agg: &Vec<i32>, item: &Vec<i32>, i: usize| { [agg, item].concat() },
+        //         empty_vec
+        //     )
+        // );
     }
 }
