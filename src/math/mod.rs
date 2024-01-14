@@ -5,3 +5,6 @@ mod integer;
 
 mod gcd;
 pub use gcd::*;
+
+mod lcm;
+pub use lcm::*;

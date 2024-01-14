@@ -1,16 +1,24 @@
 // trait to constrain the type to integers.
 
 use std::ops::Rem;
+use std::ops::Add;
 use std::ops::Sub;
 use std::ops::Div;
+use std::ops::Mul;
 use std::cmp::Ord;
-pub trait Integer: Copy + Ord + Rem<Output = Self> + Sub<Output = Self> + Div<Output = Self> + 'static  {
+pub trait Integer: 
+Copy + Ord 
++ Rem<Output = Self> 
++ Add<Output = Self> 
++ Sub<Output = Self> 
++ Mul<Output = Self>  
++ Div<Output = Self> 
++ 'static  {
     const ZERO: Self;
     const ONE: Self;
     const MAX: Self;
     const MIN: Self;
 }
-
 impl Integer for i8 {  
     const ZERO: i8 = 0;
     const ONE: i8 = 1;

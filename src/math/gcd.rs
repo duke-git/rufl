@@ -1,4 +1,4 @@
-/// return greatest common divisor (GCD) of integers
+/// return greatest common divisor (GCD) of integers.
 ///
 /// # Arguments
 ///
@@ -6,13 +6,15 @@
 ///
 /// # Returns
 ///
-/// Returns greatest common divisor.
+/// Greatest common divisor of integers.
 ///
 /// # Examples
 ///
 /// ```
 /// use ruf::math;
 ///
+/// assert_eq!(5, math::gcd(&vec![5]));
+/// 
 /// assert_eq!(6, math::gcd(&vec![6, 12, 18]));
 ///
 /// ```
@@ -31,7 +33,7 @@ pub fn gcd<T: crate::math::integer::Integer>(numbers: &Vec<T>) -> T {
     result
 }
 
-fn calculate_gcd<T: crate::math::integer::Integer>(a: T, b: T) -> T {
+pub(crate) fn calculate_gcd<T: crate::math::integer::Integer>(a: T, b: T) -> T {
     if a == T::ZERO {
         b
     } else if b == T::ZERO {
