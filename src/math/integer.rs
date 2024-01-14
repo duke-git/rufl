@@ -1,104 +1,83 @@
 // trait to constrain the type to integers.
 
-use std::ops::Rem;
-use std::ops::Add;
-use std::ops::Sub;
-use std::ops::Div;
-use std::ops::Mul;
-use std::cmp::Ord;
-pub trait Integer: 
-Copy + Ord 
-+ Rem<Output = Self> 
-+ Add<Output = Self> 
-+ Sub<Output = Self> 
-+ Mul<Output = Self>  
-+ Div<Output = Self> 
-+ 'static  {
+// use std::cmp::Ord;
+// use std::ops::Add;
+// use std::ops::Div;
+// use std::ops::Mul;
+// use std::ops::Rem;
+// use std::ops::Sub;
+pub trait Integer:
+    Sized
+    + Copy
+    + Ord
+    + PartialOrd
+    + Eq
+    // + Rem<Output = Self>
+    // + Add<Output = Self>
+    // + Sub<Output = Self>
+    // + Mul<Output = Self>
+    // + Div<Output = Self>
+    + 'static
+{
     const ZERO: Self;
     const ONE: Self;
     const MAX: Self;
     const MIN: Self;
-}
-impl Integer for i8 {  
-    const ZERO: i8 = 0;
-    const ONE: i8 = 1;
-    const MAX: i8 = std::i8::MAX;
-    const MIN: i8 = std::i8::MIN;
+
+    fn add(&self, other: &Self) -> Self;
+    fn sub(&self, other: &Self) -> Self;
+    fn mul(&self, other: &Self) -> Self;
+    fn div(&self, other: &Self) -> Self;
+    fn rem(&self, other: &Self) -> Self;
+
+    fn cast(other: i128) -> Self;
 }
 
-impl Integer for i16 {  
-    const ZERO: i16 = 0;
-    const ONE: i16 = 1;
-    const MAX: i16 = std::i16::MAX;
-    const MIN: i16 = std::i16::MIN;
+macro_rules! impl_integer_for_isize {
+    ($T:ty, $test_mod:ident) => {
+        impl Integer for $T {
+            const ZERO: $T = 0;
+            const ONE: $T = 1;
+            const MAX: $T = <$T>::max_value();
+            const MIN: $T = <$T>::min_value();
+
+            fn add(&self, other: &Self) -> Self {
+                *self + *other
+            }
+
+            fn sub(&self, other: &Self) -> Self {
+                *self - *other
+            }
+
+            fn mul(&self, other: &Self) -> Self {
+                *self * *other
+            }
+
+            fn div(&self, other: &Self) -> Self {
+                *self / *other
+            }
+
+            fn rem(&self, other: &Self) -> Self {
+                *self % *other
+            }
+
+            fn cast(other: i128) -> Self {
+                other as $T
+            }
+        }
+    };
 }
 
-impl Integer for i32 {  
-    const ZERO: i32 = 0;
-    const ONE: i32 = 1;
-    const MAX: i32 = std::i32::MAX;
-    const MIN: i32 = std::i32::MIN;
-}
+impl_integer_for_isize!(i8, test_integer_i8);
+impl_integer_for_isize!(i16, test_integer_i16);
+impl_integer_for_isize!(i32, test_integer_i32);
+impl_integer_for_isize!(i64, test_integer_i64);
+impl_integer_for_isize!(i128, test_integer_i128);
+impl_integer_for_isize!(isize, test_integer_isize);
 
-impl Integer for i64 {  
-    const ZERO: i64 = 0;  
-    const ONE: i64 = 1;
-    const MAX: i64 = std::i64::MAX;
-    const MIN: i64 = std::i64::MIN;
-}
-
-impl Integer for i128 {  
-    const ZERO: i128 = 0;
-    const ONE: i128 = 1;
-    const MAX: i128 = std::i128::MAX;
-    const MIN: i128 = std::i128::MIN;
-}
-
-impl Integer for u8 {  
-    const ZERO: u8 = 0;
-    const ONE: u8 = 1;
-    const MAX: u8 = std::u8::MAX;
-    const MIN: u8 = std::u8::MIN;
-}
-
-impl Integer for u16 {  
-    const ZERO: u16 = 0;
-    const ONE: u16 = 1;
-    const MAX: u16 = std::u16::MAX;
-    const MIN: u16 = std::u16::MIN;
-}
-
-impl Integer for u32 {  
-    const ZERO: u32 = 0;
-    const ONE: u32 = 1;
-    const MAX: u32 = std::u32::MAX;
-    const MIN: u32 = std::u32::MIN;
-}
-
-impl Integer for u64 {  
-    const ZERO: u64 = 0;
-    const ONE: u64 = 1;
-    const MAX: u64 = std::u64::MAX;
-    const MIN: u64 = std::u64::MIN;
-}
-
-impl Integer for u128 {  
-    const ZERO: u128 = 0;
-    const ONE: u128 = 1;
-    const MAX: u128 = std::u128::MAX;
-    const MIN: u128 = std::u128::MIN;
-}
-
-impl Integer for isize {  
-    const ZERO: isize = 0;
-    const ONE: isize = 1;
-    const MAX: isize = std::isize::MAX;
-    const MIN: isize = std::isize::MIN;
-}
-
-impl Integer for usize {  
-    const ZERO: usize = 0;
-    const ONE: usize = 1;
-    const MAX: usize = std::usize::MAX;
-    const MIN: usize = std::usize::MIN;
-}
+impl_integer_for_isize!(u8, test_integer_u8);
+impl_integer_for_isize!(u16, test_integer_u16);
+impl_integer_for_isize!(u32, test_integer_u32);
+impl_integer_for_isize!(u64, test_integer_u64);
+impl_integer_for_isize!(u128, test_integer_u128);
+impl_integer_for_isize!(usize, test_integer_usize);

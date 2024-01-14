@@ -1,3 +1,5 @@
+use super::integer;
+
 /// return least common multiple (lcm) of integers.
 ///
 /// # Arguments
@@ -19,7 +21,7 @@
 ///
 /// ```
 
-pub fn lcm<T: crate::math::integer::Integer>(numbers: &Vec<T>) -> T {
+pub fn lcm<T: integer::Integer>(numbers: &Vec<T>) -> T {
     if numbers.is_empty() {
         return T::MIN;
     }
@@ -33,8 +35,9 @@ pub fn lcm<T: crate::math::integer::Integer>(numbers: &Vec<T>) -> T {
     result
 }
 
-pub(crate) fn calculate_lcm<T: crate::math::integer::Integer>(a: T, b: T) -> T {
-    a * b / crate::math::calculate_gcd(a, b)
+pub(crate) fn calculate_lcm<T: integer::Integer>(a: T, b: T) -> T {
+    let gcd_value = crate::math::calculate_gcd(a, b);
+    a.mul(&b).div(&gcd_value)
 }
 #[cfg(test)]
 mod tests {

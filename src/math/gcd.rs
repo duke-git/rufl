@@ -1,3 +1,5 @@
+use super::integer;
+
 /// return greatest common divisor (GCD) of integers.
 ///
 /// # Arguments
@@ -19,7 +21,7 @@
 ///
 /// ```
 
-pub fn gcd<T: crate::math::integer::Integer>(numbers: &Vec<T>) -> T {
+pub fn gcd<T: integer::Integer>(numbers: &Vec<T>) -> T {
     if numbers.is_empty() {
         return T::MIN;
     }
@@ -33,13 +35,13 @@ pub fn gcd<T: crate::math::integer::Integer>(numbers: &Vec<T>) -> T {
     result
 }
 
-pub(crate) fn calculate_gcd<T: crate::math::integer::Integer>(a: T, b: T) -> T {
+pub(crate) fn calculate_gcd<T: integer::Integer>(a: T, b: T) -> T {
     if a == T::ZERO {
         b
     } else if b == T::ZERO {
         a
     } else {
-        calculate_gcd(b, a % b)
+        calculate_gcd(b, a.rem(&b))
     }
 }
 #[cfg(test)]
