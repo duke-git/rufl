@@ -41,26 +41,32 @@ macro_rules! impl_integer_for_isize {
             const MAX: $T = <$T>::max_value();
             const MIN: $T = <$T>::min_value();
 
+            #[inline]
             fn add(&self, other: &Self) -> Self {
                 *self + *other
             }
 
+            #[inline]
             fn sub(&self, other: &Self) -> Self {
                 *self - *other
             }
 
+            #[inline]
             fn mul(&self, other: &Self) -> Self {
                 *self * *other
             }
 
+            #[inline]
             fn div(&self, other: &Self) -> Self {
                 *self / *other
             }
 
+            #[inline]
             fn rem(&self, other: &Self) -> Self {
                 *self % *other
             }
 
+            #[inline]
             fn cast(other: i128) -> Self {
                 other as $T
             }
