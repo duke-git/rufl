@@ -1,24 +1,7 @@
 // trait to constrain the type to integers.
+use std::any::Any;
 
-// use std::cmp::Ord;
-// use std::ops::Add;
-// use std::ops::Div;
-// use std::ops::Mul;
-// use std::ops::Rem;
-// use std::ops::Sub;
-pub trait Integer:
-    Sized
-    + Copy
-    + Ord
-    + PartialOrd
-    + Eq
-    // + Rem<Output = Self>
-    // + Add<Output = Self>
-    // + Sub<Output = Self>
-    // + Mul<Output = Self>
-    // + Div<Output = Self>
-    + 'static
-{
+pub trait Integer: Sized + Copy + Ord + PartialOrd + Eq + 'static {
     const ZERO: Self;
     const ONE: Self;
     const MAX: Self;
@@ -31,6 +14,8 @@ pub trait Integer:
     fn rem(&self, other: &Self) -> Self;
 
     fn cast(other: i128) -> Self;
+
+    // fn type_of(self) -> &'static str;
 }
 
 macro_rules! impl_integer_for_isize {
@@ -70,6 +55,16 @@ macro_rules! impl_integer_for_isize {
             fn cast(other: i128) -> Self {
                 other as $T
             }
+
+            // fn type_of(self) -> &'static str {
+            //     if self.type_id() == std::any::TypeId::of::<i8>() {
+            //         "i8"
+            //     } else if self.type_id() == std::any::TypeId::of::<i16>() {
+            //         "i16"
+            //     } else {
+            //         ""
+            //     }
+            // }
         }
     };
 }

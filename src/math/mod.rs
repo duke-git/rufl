@@ -1,7 +1,11 @@
 //! math mod contains several utility functions for handling mathematical calculations.
 //!
 
+mod float;
 mod integer;
+
+mod abs;
+pub use abs::*;
 
 mod gcd;
 pub use gcd::*;
