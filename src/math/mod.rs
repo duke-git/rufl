@@ -3,6 +3,7 @@
 
 mod float;
 mod integer;
+mod number;
 
 mod abs;
 pub use abs::*;
