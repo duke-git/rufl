@@ -8,6 +8,9 @@ mod number;
 mod abs;
 pub use abs::*;
 
+mod sqrt;
+pub use sqrt::*;
+
 mod gcd;
 pub use gcd::*;
 
