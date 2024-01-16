@@ -5,7 +5,7 @@ pub trait Float: number::Number {
     fn cast(other: f64) -> Self;
 }
 
-macro_rules! impl_float_for_f {
+macro_rules! impl_float_for_number {
     ($T:ty) => {
         impl Float for $T {
             #[inline]
@@ -16,5 +16,5 @@ macro_rules! impl_float_for_f {
     };
 }
 
-impl_float_for_f!(f32);
-impl_float_for_f!(f64);
+impl_float_for_number!(f32);
+impl_float_for_number!(f64);
