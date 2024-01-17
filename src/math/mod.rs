@@ -23,5 +23,8 @@ pub use fib_nth::*;
 mod round;
 pub use round::*;
 
+mod round_up;
+pub use round_up::*;
+
 mod is_prime;
 pub use is_prime::*;
