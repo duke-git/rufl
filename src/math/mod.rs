@@ -26,5 +26,8 @@ pub use round::*;
 mod round_up;
 pub use round_up::*;
 
+mod round_down;
+pub use round_down::*;
+
 mod is_prime;
 pub use is_prime::*;

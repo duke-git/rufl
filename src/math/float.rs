@@ -7,6 +7,7 @@ pub trait Float: number::Number {
     fn to_f64(&self) -> f64;
     fn round_val(&self) -> Self;
     fn ceil_val(&self) -> Self;
+    fn floor_val(&self) -> Self;
 }
 
 macro_rules! impl_float_for_number {
@@ -35,6 +36,11 @@ macro_rules! impl_float_for_number {
             #[inline]
             fn ceil_val(&self) -> Self {
                 (*self).ceil()
+            }
+
+            #[inline]
+            fn floor_val(&self) -> Self {
+                (*self).floor()
             }
         }
     };
