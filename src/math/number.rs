@@ -13,6 +13,7 @@ pub trait Number: Sized + Copy + PartialOrd + PartialEq + 'static {
     fn div(&self, other: &Self) -> Self;
     fn rem(&self, other: &Self) -> Self;
 
+
     fn type_of(self) -> &'static str;
 }
 

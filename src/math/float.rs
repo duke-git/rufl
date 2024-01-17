@@ -5,6 +5,7 @@ pub trait Float: number::Number {
     fn cast(other: f64) -> Self;
     fn to_f32(&self) -> f32;
     fn to_f64(&self) -> f64;
+    fn round_val(&self) -> Self;
 }
 
 macro_rules! impl_float_for_number {
@@ -23,6 +24,11 @@ macro_rules! impl_float_for_number {
             #[inline]
             fn to_f64(&self) -> f64 {
                 *self as f64
+            }
+
+            #[inline]
+            fn round_val(&self) -> Self {
+                (*self).round()
             }
         }
     };
