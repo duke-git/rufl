@@ -37,8 +37,8 @@ mod tests {
 
     #[test]
     fn test_sum() {
-        assert_eq!(10, sum(&vec![1, 2, 3, 4]));
-        assert_eq!(6.6, sum(&vec![1.1, 2.2, 3.3]));
         assert_eq!(0, sum(&vec![-1, 1]));
+        assert_eq!(10, sum(&vec![1, 2, 3, 4]));
+        assert_eq!(6.6, sum(&vec![1.1, 2.2, 3.3])); // 6.5999999999999996 IEEE754 float point: https://floating-point-gui.de/
     }
 }
