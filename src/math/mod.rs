@@ -34,3 +34,6 @@ pub use is_prime::*;
 
 mod factorial;
 pub use factorial::*;
+
+mod percent;
+pub use percent::*;
