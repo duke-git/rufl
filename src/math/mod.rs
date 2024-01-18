@@ -31,3 +31,6 @@ pub use round_down::*;
 
 mod is_prime;
 pub use is_prime::*;
+
+mod factorial;
+pub use factorial::*;
