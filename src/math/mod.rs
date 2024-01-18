@@ -38,5 +38,8 @@ pub use factorial::*;
 mod sum;
 pub use sum::*;
 
+mod average;
+pub use average::*;
+
 mod percent;
 pub use percent::*;

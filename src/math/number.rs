@@ -13,6 +13,8 @@ pub trait Number: Sized + Copy + PartialOrd + PartialEq + 'static {
     fn div(&self, other: &Self) -> Self;
     fn rem(&self, other: &Self) -> Self;
 
+    fn to_f32(&self) -> f32;
+    fn to_f64(&self) -> f64;
 
     fn type_of(self) -> &'static str;
 }
@@ -48,6 +50,16 @@ macro_rules! impl_number_for_data {
             #[inline]
             fn rem(&self, other: &Self) -> Self {
                 *self % *other
+            }
+
+            #[inline]
+            fn to_f32(&self) -> f32 {
+                *self as f32
+            }
+
+            #[inline]
+            fn to_f64(&self) -> f64 {
+                *self as f64
             }
 
             #[inline]
