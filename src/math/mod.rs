@@ -52,3 +52,6 @@ pub use to_radian::*;
 
 mod to_angle;
 pub use to_angle::*;
+
+mod harmonic;
+pub use harmonic::*;
