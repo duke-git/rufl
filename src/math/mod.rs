@@ -43,3 +43,6 @@ pub use average::*;
 
 mod percent;
 pub use percent::*;
+
+mod truncate;
+pub use truncate::*;
