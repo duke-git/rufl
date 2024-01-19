@@ -46,3 +46,9 @@ pub use percent::*;
 
 mod truncate;
 pub use truncate::*;
+
+mod to_radian;
+pub use to_radian::*;
+
+mod to_angle;
+pub use to_angle::*;
