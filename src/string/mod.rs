@@ -135,3 +135,6 @@ pub use is_dns::*;
 
 mod is_strong_password;
 pub use is_strong_password::*;
+
+mod add_commas;
+pub use add_commas::*;
