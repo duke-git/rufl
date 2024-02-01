@@ -1,4 +1,6 @@
-use super::number;
+use std::ops::Sub;
+
+use super::number::Number;
 
 /// Returns the absolute value of number `n`.
 ///
@@ -23,11 +25,11 @@ use super::number;
 ///
 /// ```
 
-pub fn abs<T: number::Number>(n: T) -> Result<T, String> {
+pub fn abs<T: Number + Sub<Output = T>>(n: T) -> Result<T, String> {
     if n == T::MIN {
         Err("Overflow: minimum value can't be representable".to_string())
     } else if n < T::ZERO {
-        Ok(T::ZERO.sub(&n))
+        Ok(T::ZERO - n)
     } else {
         Ok(n)
     }

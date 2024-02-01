@@ -1,3 +1,5 @@
+use std::ops::{Add, Sub};
+
 use super::integer::Integer;
 
 /// Calculates the nth value of fibonacci number sequence.
@@ -28,13 +30,14 @@ use super::integer::Integer;
 /// assert_eq!(8, math::fib_nth(1, 1, 5));
 /// ```
 
-pub fn fib_nth<T: Integer>(first: T, second: T, n: T) -> T {
-    if n == T::ZERO {
-        return first;
-    } else if n == T::ONE {
-        return second;
-    } else {
-        return fib_nth(second, first.add(&second), n.sub(&Integer::cast(1 as i128)));
+pub fn fib_nth<T>(first: T, second: T, n: usize) -> T
+where
+    T: Integer + Add<Output = T> + Sub<usize, Output = T>,
+{
+    match n {
+        0 => first,
+        1 => second,
+        _ => fib_nth(second, first + second, n - 1),
     }
 }
 

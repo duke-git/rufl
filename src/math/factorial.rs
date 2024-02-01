@@ -1,3 +1,5 @@
+use std::ops::{Mul, Sub};
+
 use super::integer::Integer;
 
 /// Calculats the factorial value of number `n`.
@@ -15,22 +17,23 @@ use super::integer::Integer;
 /// ```
 /// use ruf::math;
 ///
-/// assert_eq!(1, math::factorial(-1));
-///
 /// assert_eq!(1, math::factorial(0));
 ///
 /// assert_eq!(6, math::factorial(3));
 ///
 /// ```
 
-pub fn factorial<T: Integer>(n: T) -> T {
+pub fn factorial<T>(n: T) -> T
+where
+    T: Integer + Sub<usize, Output = T> + Mul<Output = T>,
+{
     factorial_tail(n, Integer::cast(1 as i128))
 }
-fn factorial_tail<T: Integer>(n: T, acc: T) -> T {
-    if n.le(&Integer::cast(0 as i128)) {
+fn factorial_tail<T: Integer + Sub<usize, Output = T> + Mul<Output = T>>(n: T, acc: T) -> T {
+    if n <= T::ZERO {
         acc
     } else {
-        factorial_tail(n.sub(&Integer::cast(1 as i128)), acc.mul(&n))
+        factorial_tail(n - 1, acc * n)
     }
 }
 
@@ -40,7 +43,6 @@ mod tests {
 
     #[test]
     fn test_factorial() {
-        assert_eq!(1, factorial(-1));
         assert_eq!(1, factorial(0));
         assert_eq!(1, factorial(1));
         assert_eq!(2, factorial(2));

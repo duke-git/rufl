@@ -1,4 +1,6 @@
-use super::integer;
+use std::ops::{Div, Mul, Rem};
+
+use super::integer::Integer;
 
 /// return least common multiple (lcm) of integers.
 ///
@@ -16,12 +18,15 @@ use super::integer;
 /// use ruf::math;
 ///
 /// assert_eq!(6, math::lcm(&vec![6]));
-/// 
+///
 /// assert_eq!(168, math::lcm(&vec![6, 7, 8]));
 ///
 /// ```
 
-pub fn lcm<T: integer::Integer>(numbers: &Vec<T>) -> T {
+pub fn lcm<T>(numbers: &Vec<T>) -> T
+where
+    T: Integer + Mul<Output = T> + Div<Output = T> + Rem<Output = T>,
+{
     if numbers.is_empty() {
         return T::MIN;
     }
@@ -35,9 +40,12 @@ pub fn lcm<T: integer::Integer>(numbers: &Vec<T>) -> T {
     result
 }
 
-pub(crate) fn calculate_lcm<T: integer::Integer>(a: T, b: T) -> T {
+pub(crate) fn calculate_lcm<T: Integer>(a: T, b: T) -> T
+where
+    T: Integer + Mul<Output = T> + Div<Output = T> + Rem<Output = T>,
+{
     let gcd_value = crate::math::calculate_gcd(a, b);
-    a.mul(&b).div(&gcd_value)
+    a * b / gcd_value
 }
 #[cfg(test)]
 mod tests {
