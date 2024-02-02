@@ -20,6 +20,9 @@ pub use lcm::*;
 mod fib_nth;
 pub use fib_nth::*;
 
+mod fib_sum;
+pub use fib_sum::*;
+
 mod round;
 pub use round::*;
 
