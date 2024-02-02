@@ -1,4 +1,4 @@
-use std::ops::{Add, Sub};
+use std::ops::Add;
 
 use super::integer::Integer;
 
@@ -32,7 +32,7 @@ use super::integer::Integer;
 
 pub fn fib_nth<T>(first: T, second: T, n: usize) -> T
 where
-    T: Integer + Add<Output = T> + Sub<usize, Output = T>,
+    T: Integer + Add<Output = T>,
 {
     match n {
         0 => first,
