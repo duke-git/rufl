@@ -1,4 +1,5 @@
 use super::float::Float;
+use std::ops::{Div, Mul};
 
 /// Round down and truncate off `n` decimal places to number.
 ///
@@ -27,11 +28,14 @@ use super::float::Float;
 ///
 /// ```
 
-pub fn round_down<T: Float>(number: T, n: usize) -> T {
+pub fn round_down<T>(number: T, n: usize) -> T
+where
+    T: Float + Mul<f64, Output = T> + Div<f64, Output = T>,
+{
     let factor = 10f64.powi(n as i32);
-    let rounded = number.mul(&Float::cast(factor as f64)).floor_val();
+    let rounded = (number * factor).floor_val();
 
-    rounded.div(&Float::cast(factor as f64))
+    rounded / factor
 }
 
 #[cfg(test)]
