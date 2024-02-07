@@ -40,42 +40,39 @@ use std::collections::HashMap;
 ///            .register("foo", Event::new("hello".to_string()))
 ///            .publish();
 ///     
-///  //MySubscriber2 will run first because its priority is higher than MySubscriber1
-///  assert_eq!(Ok(()), result);
+/// //MySubscriber2 will run first because its priority is higher than MySubscriber1
+/// assert_eq!(Ok(()), result);
 ///
 /// #[derive(Clone, Copy)]
 /// struct MySubscriber1 {}
 ///
 /// impl MySubscriber1 {
-///   const NAME: &'static str = "MySubscriber1";
+///     const NAME: &'static str = "MySubscriber1";
 ///
-///   pub fn new() -> Self {
-///       MySubscriber1 {}
-///   }
+///     pub fn new() -> Self {
+///         MySubscriber1 {}
+///     }
 /// }
 ///
 /// impl Subscriber for MySubscriber1 {
 ///     fn id(&self) -> String {
-///            "subscriber1".to_string()
+///         "subscriber1".to_string()
 ///     }
 ///
 ///     fn priority(&self) -> usize {
-///            2
+///         2
 ///     }
 ///
 ///     fn handle_before(&mut self, _event: &mut Event) -> Result<(), String> {
 ///        println!("MySubscriber1 handle_before: ");
-///            Ok(())
-///        }
+///        ok(())
+///     }
 ///
 ///     fn handle_event(&mut self, event: &mut Event) -> Result<(), String> {
 ///        match event.get_data::<String>() {
 ///            Some(value) => {
-///                println!("{} received event message: {}",
-///                        MySubscriber1::NAME,
-///                        value
-///                    );
-///               Ok(())
+///                println!("{} received event message: {}", MySubscriber1::NAME, value);
+///                Ok(())
 ///            }
 ///            None => {
 ///                let message = format!("{} received error message", MySubscriber1::NAME);
@@ -84,11 +81,11 @@ use std::collections::HashMap;
 ///            }
 ///        }
 ///
-///        fn handle_after(&self, _event: &Event) -> Result<(), String> {
-///            println!("MySubscriber1 handle_after: ");
-///            Ok(())
-///        }
+///    fn handle_after(&self, _event: &Event) -> Result<(), String> {
+///       println!("MySubscriber1 handle_after: ");
+///       Ok(())
 ///    }
+/// }
 /// #[derive(Clone, Copy)]
 /// struct MySubscriber2 {}
 ///
@@ -102,11 +99,11 @@ use std::collections::HashMap;
 ///
 /// impl Subscriber for MySubscriber2 {
 ///     fn id(&self) -> String {
-///            "subscriber2".to_string()
+///         "subscriber2".to_string()
 ///     }
 ///
 ///     fn priority(&self) -> usize {
-///            1
+///         1
 ///     }
 ///
 ///     fn handle_before(&mut self, _event: &mut Event) -> Result<(), String> {
@@ -117,11 +114,8 @@ use std::collections::HashMap;
 ///     fn handle_event(&mut self, event: &mut Event) -> Result<(), String> {
 ///        match event.get_data::<String>() {
 ///            Some(value) => {
-///                println!("{} received event message: {}",
-///                        MySubscriber2::NAME,
-///                        value
-///                    );
-///               Ok(())
+///                println!("{} received event message: {}", MySubscriber2::NAME, value);
+///                Ok(())
 ///            }
 ///            None => {
 ///                let message = format!("{} received error message", MySubscriber2::NAME);
