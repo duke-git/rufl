@@ -65,7 +65,7 @@ use std::collections::HashMap;
 ///
 ///     fn handle_before(&mut self, _event: &mut Event) -> Result<(), String> {
 ///        println!("MySubscriber1 handle_before: ");
-///        ok(())
+///        Ok(())
 ///     }
 ///
 ///     fn handle_event(&mut self, event: &mut Event) -> Result<(), String> {
