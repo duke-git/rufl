@@ -30,7 +30,6 @@ pub fn harmonic(n: u32) -> f64 {
         }
     }
     sum
-    // crate::math::round(sum, 3)
 }
 
 #[cfg(test)]

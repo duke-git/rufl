@@ -36,9 +36,6 @@ where
     let rounded = (number * factor).round_val();
 
     rounded / factor
-    // let rounded = number.mul(&Float::cast(factor as f64)).round_val();
-
-    // rounded.div(&Float::cast(factor as f64))
 }
 
 #[cfg(test)]
