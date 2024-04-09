@@ -6,7 +6,7 @@ use std::path::Path;
 ///
 /// # Arguments
 ///
-/// * `path` - The path of file to create.
+/// * `file_path` - The path of file to create.
 ///
 /// # Returns
 ///
@@ -30,12 +30,12 @@ use std::path::Path;
 ///
 /// ```
 
-pub fn create_file(path: &Path) -> Result<File, Error> {
-    if let Some(p) = path.parent() {
-        fs::create_dir_all(p)?;
+pub fn create_file(file_path: &Path) -> Result<File, Error> {
+    if let Some(path) = file_path.parent() {
+        fs::create_dir_all(path)?;
     }
 
-    File::create(path).map_err(Into::into)
+    File::create(file_path).map_err(Into::into)
 }
 
 #[cfg(test)]
