@@ -9,3 +9,6 @@ pub use file_names::*;
 
 mod read_to_buffer;
 pub use read_to_buffer::*;
+
+mod read_to_string;
+pub use read_to_string::*;
