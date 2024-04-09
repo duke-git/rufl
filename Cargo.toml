@@ -16,9 +16,10 @@ regex = "1.10.2"
 unicode-segmentation = "1.10.1"
 
 [features]
-default = ["collection", "eventbus", "math", "random", "string"]
+default = ["collection", "eventbus", "file", "math", "random", "string"]
 collection = []
 eventbus = []
+file = []
 math = []
 random = []
 string = []
