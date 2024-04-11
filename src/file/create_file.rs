@@ -30,8 +30,8 @@ use std::path::Path;
 ///
 /// ```
 
-pub fn create_file(file_path: &Path) -> Result<File, Error> {
-    if let Some(path) = file_path.parent() {
+pub fn create_file<P: AsRef<Path>>(file_path: P) -> Result<File, Error> {
+    if let Some(path) = file_path.as_ref().parent() {
         fs::create_dir_all(path)?;
     }
 

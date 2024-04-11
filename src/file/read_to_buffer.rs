@@ -1,6 +1,7 @@
 use std::fs::File;
 use std::io::Error;
 use std::io::Read;
+use std::path::Path;
 
 /// Reads file to buffer byte array.
 ///
@@ -22,7 +23,7 @@ use std::io::Read;
 ///
 /// ```
 
-pub fn read_to_buffer(path: &str) -> Result<Vec<u8>, Error> {
+pub fn read_to_buffer<P: AsRef<Path>>(path: P) -> Result<Vec<u8>, Error> {
     let mut file = File::open(path)?;
 
     let mut buffer = Vec::new();

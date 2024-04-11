@@ -21,16 +21,16 @@ use std::path::Path;
 ///
 /// ```
 
-pub fn file_names(dir_path: &str) -> Vec<String> {
+pub fn file_names<P: AsRef<Path>>(dir_path: P) -> Vec<String> {
     let mut file_names: Vec<String> = Vec::new();
 
-    let path = Path::new(dir_path);
+    // let path = Path::new(dir_path);
 
-    if !path.exists() || !path.is_dir() {
+    if !dir_path.as_ref().exists() || !dir_path.as_ref().is_dir() {
         return file_names;
     }
 
-    for entry in fs::read_dir(path).unwrap() {
+    for entry in fs::read_dir(dir_path).unwrap() {
         let path = entry.unwrap().path();
 
         if path.is_file() {

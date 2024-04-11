@@ -1,6 +1,7 @@
 use std::fs::File;
 use std::io::Error;
 use std::io::Read;
+use std::path::Path;
 
 /// Reads file to string.
 ///
@@ -31,7 +32,7 @@ use std::io::Read;
 ///
 /// ```
 
-pub fn read_to_string(path: &str) -> Result<String, Error> {
+pub fn read_to_string<P: AsRef<Path>>(path: P) -> Result<String, Error> {
     let mut file = File::open(path)?;
 
     let mut content = String::new();
