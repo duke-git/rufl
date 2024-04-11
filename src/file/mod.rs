@@ -12,3 +12,6 @@ pub use read_to_buffer::*;
 
 mod read_to_string;
 pub use read_to_string::*;
+
+mod read_to_lines;
+pub use read_to_lines::*;
