@@ -4,6 +4,9 @@
 mod create_file;
 pub use create_file::*;
 
+mod copy_dirs;
+pub use copy_dirs::*;
+
 mod file_names;
 pub use file_names::*;
 
