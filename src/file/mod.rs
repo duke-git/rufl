@@ -21,3 +21,6 @@ pub use read_to_lines::*;
 
 mod is_symlink;
 pub use is_symlink::*;
+
+mod write_to;
+pub use write_to::*;
