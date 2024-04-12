@@ -15,10 +15,19 @@ use std::path::Path;
 /// # Examples
 ///
 /// ```
+/// use std::fs;
 /// use ruf::file;
 ///
-/// let result = file::write_to("./src/file/write_to.rs");
-/// assert_eq!(true, result.is_ok());
+/// let result = file::write_to("./src/file/test.txt", "hello".as_bytes(), false);
+///
+/// match result {
+///    Ok(()) => {
+///         let _ = fs::remove_file("./src/file/test.txt");
+///    }
+///    Err(err) => {
+///         println!("Error: {}", err);
+///    }
+/// }
 ///
 /// ```
 
