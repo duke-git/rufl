@@ -18,3 +18,6 @@ pub use read_to_string::*;
 
 mod read_to_lines;
 pub use read_to_lines::*;
+
+mod is_symlink;
+pub use is_symlink::*;
