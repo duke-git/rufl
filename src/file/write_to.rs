@@ -45,11 +45,9 @@ pub fn write_to<P: AsRef<Path>>(path: P, data: &[u8], append: bool) -> Result<()
 
 #[cfg(test)]
 mod tests {
-    use std::fs;
-
-    use crate::file::read_to_string;
-
     use super::*;
+    use crate::file::read_to_string;
+    use std::fs;
 
     #[test]
     fn test_write_to() {
