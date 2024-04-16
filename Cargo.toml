@@ -6,7 +6,7 @@ edition = "2021"
 description = "A powerful util function library for rust"
 license = "MIT"
 repository = "https://github.com/duke-git/ruf"
-keywords = ["rust", "util", "lib", "lodash", "simple"]
+keywords = ["rust", "util", "lib", "function", "common"]
 categories = ["utils"]
 
 [dependencies]
