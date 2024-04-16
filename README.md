@@ -16,11 +16,11 @@ _Rufl is short for "rust util function library"._
 - Simple: well structure, test for every function.
 
 ## Installation
-- cargo add ruf
+- cargo add rufl
 
 ```toml
 [dependencies]
-ruf = "0.1.1"
+rufl = "0.1.1"
 ```
 
 ## Example

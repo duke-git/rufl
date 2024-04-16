@@ -16,11 +16,11 @@ _Rufl是”rust util function"的缩写。_
 - 🛠 简洁: 结构组织良好，测试所有API函数。
 
 ## 安装
-- cargo add ruf
+- cargo add rufl
 
 ```toml
 [dependencies]
-ruf = "0.1.1"
+rufl = "0.1.1"
 ```
 
 ## 示例
