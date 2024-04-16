@@ -16,8 +16,8 @@ use std::path::Path;
 /// ```
 /// use rufl::file;
 ///
-/// let file_names = file::file_names("./"); //project root dir
-/// assert_eq!(6, file_names.len());
+/// let file_names = file::file_names("./src/eventbus");
+/// assert_eq!(4, file_names.len());
 ///
 /// ```
 
@@ -45,7 +45,7 @@ mod tests {
 
     #[test]
     fn test_file_names() {
-        let files = file_names("./"); //project root dir
-        assert_eq!(6, files.len());
+        let files = file_names("./src/eventbus");
+        assert_eq!(4, files.len());
     }
 }
