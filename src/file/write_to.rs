@@ -18,11 +18,11 @@ use std::path::Path;
 /// use std::fs;
 /// use ruf::file;
 ///
-/// let result = file::write_to("./src/file/test.txt", "hello".as_bytes(), false);
+/// let result = file::write_to("./src/file/test_write_to.txt", "hello".as_bytes(), false);
 ///
 /// match result {
 ///    Ok(()) => {
-///         let _ = fs::remove_file("./src/file/test.txt");
+///         let _ = fs::remove_file("./src/file/test_write_to.txt");
 ///    }
 ///    Err(err) => {
 ///         println!("Error: {}", err);
@@ -51,15 +51,15 @@ mod tests {
 
     #[test]
     fn test_write_to() {
-        let result = write_to("./src/file/test.txt", "hello".as_bytes(), false);
+        let result = write_to("./src/file/test_write_to.txt", "hello".as_bytes(), false);
 
         match result {
             Ok(()) => {
-                let read_file = read_to_string("./src/file/test.txt");
+                let read_file = read_to_string("./src/file/test_write_to.txt");
                 match read_file {
                     Ok(content) => {
                         assert_eq!("hello", content);
-                        let _ = fs::remove_file("./src/file/test.txt");
+                        let _ = fs::remove_file("./src/file/test_write_to.txt");
                     }
                     Err(err) => {
                         println!("Error: {}", err);

@@ -64,8 +64,8 @@ pub use pad_end::*;
 mod pascal_case;
 pub use pascal_case::*;
 
-mod remove;
-pub use remove::*;
+mod remove_all;
+pub use remove_all::*;
 
 mod removen;
 pub use removen::*;
