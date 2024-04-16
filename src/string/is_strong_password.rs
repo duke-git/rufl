@@ -19,7 +19,7 @@ use regex::Regex;
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::is_strong_password("abc123@ABC"));
 ///

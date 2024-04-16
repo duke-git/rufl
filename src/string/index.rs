@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(2, string::index("hello", "l", 0));
 ///

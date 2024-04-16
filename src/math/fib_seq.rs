@@ -15,7 +15,7 @@ use super::integer::Integer;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(vec![0], math::fib_seq(1));
 /// assert_eq!(vec![0, 1], math::fib_seq(2));

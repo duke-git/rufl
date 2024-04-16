@@ -14,7 +14,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(1, collection::count(&[1, 2, 3], 1));
 ///

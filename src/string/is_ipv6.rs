@@ -13,7 +13,7 @@ use std::net::Ipv6Addr;
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::is_ipv6("::0:0:0:0:0:0:1"));
 ///

@@ -3,9 +3,9 @@
 <br/>
 </div>
 
-#### Ruf is an util function library for rust. It provides a series of useful functions to make your rust development easier.
+#### Rufl is an util function library for rust. It provides a series of useful functions to make your rust development easier.
 
-_Ruf is short for "rust util function"._
+_Ruf is short for "rust util function library"._
 
 ## [简体中文](./README_zh-CN.md)
 
@@ -25,11 +25,11 @@ ruf = "0.1.1"
 
 ## Example
 
-Here takes the string function `add_commas` (Add comma to a number value by every 3 numbers from right. Ahead by prefix symbol.) as an example, and the `ruf::string` mod needs to be used.
+Here takes the string function `add_commas` (Add comma to a number value by every 3 numbers from right. Ahead by prefix symbol.) as an example, and the `rufl::string` mod needs to be used.
 
 Code:
 ```rust
-use ruf::string;
+use rufl::string;
 
 fn main() {
     let money_amount: String = string::add_commas("1234567", "$");

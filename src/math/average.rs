@@ -12,7 +12,7 @@ use super::number::Number;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(2.5, math::average(&vec![1, 2, 3, 4]));
 ///

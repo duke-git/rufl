@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(Some(3), collection::max(&vec![1, 2, 3, 2]));
 ///
@@ -23,7 +23,7 @@
 /// ```
 
 pub fn max<C: AsRef<[T]>, T: PartialOrd + Clone>(collection: &C) -> Option<T> {
-    let vector =  collection.as_ref().to_vec();
+    let vector = collection.as_ref().to_vec();
 
     match vector.len() {
         0 => None,
@@ -38,7 +38,7 @@ pub fn max<C: AsRef<[T]>, T: PartialOrd + Clone>(collection: &C) -> Option<T> {
                 // max = cmp::max(max, vector[i])
             }
 
-            return Some(max.clone())
+            return Some(max.clone());
         }
     }
 }

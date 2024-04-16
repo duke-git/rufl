@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let foo = string::pad_start("foobar", 6, "*");
 /// assert_eq!("foobar", foo);

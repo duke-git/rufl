@@ -13,7 +13,7 @@ use super::generate;
 /// # Examples
 ///
 /// ```
-/// use ruf::random;
+/// use rufl::random;
 ///
 /// let lower_str = random::lower(6);
 ///

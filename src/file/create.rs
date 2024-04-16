@@ -17,7 +17,7 @@ use std::path::Path;
 /// ```
 /// use std::fs;
 /// use std::path::Path;
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let path = Path::new("./src/file/test_create.txt");
 /// assert_eq!(false, path.exists());

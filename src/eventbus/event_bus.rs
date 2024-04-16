@@ -29,7 +29,7 @@ use std::collections::HashMap;
 /// # Examples
 ///
 /// ```
-/// use ruf::eventbus::{Event, EventBus, Subscriber};
+/// use rufl::eventbus::{Event, EventBus, Subscriber};
 ///
 ///
 /// let mut event_bus = EventBus::new();

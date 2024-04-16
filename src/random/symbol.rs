@@ -14,7 +14,7 @@ use super::generate;
 /// # Examples
 ///
 /// ```
-/// use ruf::random;
+/// use rufl::random;
 ///
 /// let symbol_str = random::symbol(6);
 /// assert_eq!(6, symbol_str.len());

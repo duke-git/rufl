@@ -16,7 +16,7 @@
 /// Basic usage:
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!("13242658976", string::hide("13242658976", 3, 3, "*"));
 ///

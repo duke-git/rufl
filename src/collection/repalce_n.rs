@@ -8,15 +8,15 @@
 /// * `old` - old item to be replaced.
 ///
 /// * `new` - new item to replace.
-/// 
+///
 /// * `n` - the number of old elements bo be replaced.
-/// 
+///
 ///
 ///
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// let mut vec = vec!["a", "b", "c", "b"];
 ///
@@ -28,9 +28,9 @@
 
 pub fn replace_n<T: PartialEq + Clone>(vec: &mut Vec<T>, old: T, new: T, mut n: usize) {
     for i in 0..vec.len() {
-        if vec[i] == old && n !=0{
+        if vec[i] == old && n != 0 {
             vec[i] = new.clone();
-            n -=1 ;
+            n -= 1;
         }
     }
 }

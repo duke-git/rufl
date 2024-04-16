@@ -12,7 +12,7 @@
 /// # Example
 ///
 /// ```rust
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(5, string::count_graphemes("hello"));
 ///

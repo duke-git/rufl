@@ -13,7 +13,7 @@ use std::net::Ipv4Addr;
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::is_ipv4("127.0.0.1"));
 ///

@@ -15,7 +15,7 @@
 /// Basic usage:
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!("", string::substring("abcde", 0, 0));
 ///

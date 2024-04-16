@@ -13,7 +13,7 @@ use super::number::Number;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(10, math::sum(&vec![1, 2, 3, 4]));
 ///

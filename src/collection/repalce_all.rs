@@ -17,7 +17,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// let mut vec = vec!["a", "b", "c", "b"];
 ///

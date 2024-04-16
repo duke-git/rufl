@@ -16,7 +16,7 @@ use std::path::Path;
 ///
 /// ```
 /// use std::fs;
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let result = file::write_to("./src/file/test_write_to.txt", "hello".as_bytes(), false);
 ///

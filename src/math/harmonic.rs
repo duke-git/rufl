@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(1.0000000001, math::harmonic(1));
 ///

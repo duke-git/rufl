@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(true, collection::is_ascending_order(&[1, 2, 3]));
 ///

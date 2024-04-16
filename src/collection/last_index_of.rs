@@ -14,7 +14,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(None, collection::last_index_of(&[1, 2, 3], &0));
 ///

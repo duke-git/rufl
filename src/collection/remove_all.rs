@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// let mut vec = vec!["a", "b", "c", "b"];
 ///
@@ -22,7 +22,7 @@
 /// ```
 
 pub fn remove_all<T: PartialEq>(vec: &mut Vec<T>, item: &T) {
-    vec.retain(|val|*val != *item);
+    vec.retain(|val| *val != *item);
 }
 
 #[cfg(test)]
@@ -36,7 +36,7 @@ mod tests {
         remove_all(&mut vec, &"b");
         assert_eq!(vec!["a", "c",], vec);
 
-        remove_all(&mut vec, &"b",);
+        remove_all(&mut vec, &"b");
         assert_eq!(vec!["a", "c"], vec);
     }
 }

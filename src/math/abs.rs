@@ -15,7 +15,7 @@ use super::number::Number;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(1, math::abs(-1).unwrap());
 ///

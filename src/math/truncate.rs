@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(0.0, math::truncate(0.1234, 0));
 /// assert_eq!(0.1, math::truncate(0.1234, 1));

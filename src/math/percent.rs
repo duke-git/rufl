@@ -14,7 +14,7 @@ use super::float::Float;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(50.0 as f32, math::percent(1.0 as f32, 2.0 as f32));
 ///

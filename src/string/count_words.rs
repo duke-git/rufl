@@ -12,7 +12,7 @@
 /// # Example
 ///
 /// ```rust
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(2, string::count_words("hello world", ""));
 ///

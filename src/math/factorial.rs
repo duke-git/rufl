@@ -15,7 +15,7 @@ use super::integer::Integer;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(1, math::factorial(0));
 ///

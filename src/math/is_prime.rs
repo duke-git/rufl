@@ -13,16 +13,16 @@ use super::integer::Integer;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(false, math::is_prime(1));
 ///
 /// assert_eq!(true, math::is_prime(2));
-/// 
+///
 /// assert_eq!(true, math::is_prime(3 as usize));
-/// 
+///
 /// assert_eq!(false, math::is_prime(4 as u8));
-/// 
+///
 /// ```
 
 pub fn is_prime<T: Integer>(number: T) -> bool {

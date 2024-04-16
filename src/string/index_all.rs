@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(vec![2, 3], string::index_all("hello", "l", 0));
 ///

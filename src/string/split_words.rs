@@ -13,7 +13,7 @@
 /// # Example
 ///
 /// ```rust
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let words = string::split_words("fooBarFoo123");
 /// assert_eq!(words, vec!["foo", "Bar", "Foo", "123"]);

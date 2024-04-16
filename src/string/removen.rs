@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let foo1 = string::removen("abab", "a", 0);
 /// assert_eq!("abab".to_string(), foo1);

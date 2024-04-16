@@ -17,7 +17,7 @@ use std::path::Path;
 /// # Examples
 ///
 /// ```
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let result = file::get_md5("./src/file/get_md5.rs");
 ///

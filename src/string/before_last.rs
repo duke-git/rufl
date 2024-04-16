@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let foo = string::before_last("foo", "o");
 /// assert_eq!("fo", foo);

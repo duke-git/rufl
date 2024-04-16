@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(Some(1), collection::min(&vec![1, 2, 3, 2]));
 ///
@@ -23,7 +23,7 @@
 /// ```
 
 pub fn min<C: AsRef<[T]>, T: PartialOrd + Clone>(collection: &C) -> Option<T> {
-    let vector =  collection.as_ref().to_vec();
+    let vector = collection.as_ref().to_vec();
 
     match vector.len() {
         0 => None,
@@ -37,7 +37,7 @@ pub fn min<C: AsRef<[T]>, T: PartialOrd + Clone>(collection: &C) -> Option<T> {
                 }
             }
 
-            return Some(min.clone())
+            return Some(min.clone());
         }
     }
 }

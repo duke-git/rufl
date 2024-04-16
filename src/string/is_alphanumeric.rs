@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::is_alphanumeric("abc123"));
 ///

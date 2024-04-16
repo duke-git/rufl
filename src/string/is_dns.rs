@@ -14,7 +14,7 @@ use regex::Regex;
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::is_dns("abc.com"));
 ///

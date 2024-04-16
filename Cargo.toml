@@ -1,11 +1,11 @@
 [package]
-name = "ruf"
+name = "rufl"
 version = "0.1.1"
 authors = ["dudaodong@gmail.com"]
 edition = "2021"
 description = "A powerful util function library for rust"
 license = "MIT"
-repository = "https://github.com/duke-git/ruf"
+repository = "https://github.com/duke-git/rufl"
 keywords = ["rust", "util", "lib", "function", "common"]
 categories = ["utils"]
 

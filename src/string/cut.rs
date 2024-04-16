@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let foo1 = string::cut("rust", "ru");
 /// assert_eq!(":st:true", format!("{}:{}:{}", foo1.0, foo1.1, foo1.2));

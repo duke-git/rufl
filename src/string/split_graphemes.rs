@@ -12,7 +12,7 @@
 /// # Example
 ///
 /// ```rust
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(vec!["a̐", "é", "ö̲"], string::split_graphemes("a̐éö̲"));
 ///

@@ -13,7 +13,7 @@ use super::generate;
 /// # Examples
 ///
 /// ```
-/// use ruf::random;
+/// use rufl::random;
 ///
 /// let numberic_str = random::numberic(6);
 ///

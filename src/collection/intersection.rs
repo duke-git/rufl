@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![2, 3], collection::intersection(vec![vec![1, 2, 2, 3], vec![2, 3, 4]]));
 ///

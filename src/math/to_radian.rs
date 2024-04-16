@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(0.7853981633974483, math::to_radian(45_f64));
 ///

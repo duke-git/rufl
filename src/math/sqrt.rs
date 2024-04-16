@@ -12,7 +12,7 @@ use super::float::Float;
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(0.1 as f32, math::sqrt(0.01 as f32));
 ///

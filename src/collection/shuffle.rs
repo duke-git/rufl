@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(5, collection::shuffle(&vec![1, 2, 3, 4, 5]).len());
 ///

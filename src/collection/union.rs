@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![1, 2, 3, 4], collection::union(vec![[1, 2], [3, 4]]));
 ///

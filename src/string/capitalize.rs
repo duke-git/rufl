@@ -13,7 +13,7 @@
 /// Basic usage:
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!("Foo", string::capitalize("FOO"));
 ///

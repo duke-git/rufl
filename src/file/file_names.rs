@@ -14,7 +14,7 @@ use std::path::Path;
 /// # Examples
 ///
 /// ```
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let file_names = file::file_names("./"); //project root dir
 /// assert_eq!(6, file_names.len());

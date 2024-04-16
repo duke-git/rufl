@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!("1,234,567", string::add_commas("1234567", ""));
 ///

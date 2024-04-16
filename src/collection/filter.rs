@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!([1, 2, 3].to_vec(), collection::filter(&[1, 2, 3, 4, 5].to_vec(), &|n: &i32, _i: usize| *n <= 3));
 ///

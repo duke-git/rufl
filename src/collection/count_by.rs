@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(2, collection::count_by([1, 2, 3, 4, 5], &|n: &i32, _i: usize| *n < 3));
 ///

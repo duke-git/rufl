@@ -11,7 +11,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!("foo-bar", string::kebab_case("Foo Bar"));
 ///

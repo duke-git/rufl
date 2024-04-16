@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(true, collection::all_match(&[1, 2, 3], &|n: &i32, _i: usize| *n <= 3));
 ///

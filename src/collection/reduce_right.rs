@@ -18,7 +18,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(9, collection::reduce_right(&vec!["hello", "rust"], |agg, item, _: usize| { agg + item.len() }, 0));
 ///

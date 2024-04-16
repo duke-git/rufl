@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(-1, string::last_index("hello world", "l", 0));
 ///

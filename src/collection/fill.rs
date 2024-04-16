@@ -13,7 +13,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// let vec1 = vec![0; 5];
 ///

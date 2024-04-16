@@ -6,7 +6,7 @@
 /// * `vec` - The vector to insert.
 ///
 /// * `index` - The position of vector to insert at.
-/// 
+///
 /// * `item` - The element to be inserted.
 ///
 /// # Returns
@@ -16,15 +16,15 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
-/// 
+/// use rufl::collection;
+///
 /// let mut vec = vec!["a", "b", "c"];
-/// 
+///
 /// let result = collection::insert_at(&mut vec, 3, "d");
-/// 
+///
 /// assert_eq!(true, result.ok().unwrap());
 /// assert_eq!(vec!["a", "b", "c", "d"], vec);
-/// 
+///
 /// ```
 
 pub fn insert_at<T>(vec: &mut Vec<T>, index: usize, item: T) -> Result<bool, String> {
@@ -32,7 +32,7 @@ pub fn insert_at<T>(vec: &mut Vec<T>, index: usize, item: T) -> Result<bool, Str
         return Err(String::from("insert_at: index should be <= vecor length"));
     }
 
-    vec.insert(index, item);  
+    vec.insert(index, item);
 
     Ok(true)
 }
@@ -44,7 +44,7 @@ mod tests {
     #[test]
     fn test_insert_at() {
         let mut vec = vec![];
-        
+
         let result = insert_at(&mut vec, 0, "a");
         assert_eq!(true, result.ok().unwrap());
         assert_eq!(vec!["a"], vec);
@@ -54,7 +54,10 @@ mod tests {
         assert_eq!(vec!["a", "b"], vec);
 
         let result = insert_at(&mut vec, 3, "c");
-        assert_eq!("insert_at: index should be <= vecor length", result.err().unwrap());
+        assert_eq!(
+            "insert_at: index should be <= vecor length",
+            result.err().unwrap()
+        );
         assert_eq!(vec!["a", "b"], vec);
     }
 }

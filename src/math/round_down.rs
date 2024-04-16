@@ -16,7 +16,7 @@ use std::ops::{Div, Mul};
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// let pi: f64 = std::f64::consts::PI;
 ///

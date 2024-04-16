@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![1, 2, 3], collection::unique_by([1, 2, 2, 3, 3, 3], &|a: &i32, b: &i32| { a == b }));
 ///

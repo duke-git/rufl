@@ -15,7 +15,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!((vec![2, 4], vec![1, 3, 5]), collection::partition(&vec![1, 2, 3, 4, 5], |n: &i32, _i: usize| n % 2 == 0));
 ///

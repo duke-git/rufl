@@ -17,7 +17,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(
 ///     [4, 8].to_vec(),

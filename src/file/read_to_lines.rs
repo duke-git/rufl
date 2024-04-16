@@ -17,7 +17,7 @@ use std::path::Path;
 /// # Examples
 ///
 /// ```
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let result = file::read_to_lines("./src/file/read_to_lines.rs");
 /// assert_eq!(true, result.is_ok());

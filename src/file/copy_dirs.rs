@@ -20,7 +20,7 @@ use std::path::Path;
 /// use std::fs;
 /// use std::path::Path;
 ///
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let dst_path = Path::new("./src/copyfile");
 /// assert_eq!(false, dst_path.exists());

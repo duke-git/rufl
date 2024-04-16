@@ -15,7 +15,7 @@ use std::cmp::Ordering;
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// assert_eq!(true, string::starts_with_offset("abab", "a", 0));
 ///

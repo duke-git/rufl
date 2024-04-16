@@ -18,7 +18,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![1.2], collection::difference_by([1.2, 2.1], [2.3, 3.4], &|n: &f64, _i: usize| {n.floor()}));
 ///

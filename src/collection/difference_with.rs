@@ -18,7 +18,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![1, 5], collection::difference_with(vec![1, 2, 3, 4, 5], vec![4, 5, 6, 7, 8], &|n1: i32, n2: i32| { n2 == n1 * 2}));
 ///

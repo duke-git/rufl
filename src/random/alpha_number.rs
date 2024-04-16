@@ -13,7 +13,7 @@ use super::generate;
 /// # Examples
 ///
 /// ```
-/// use ruf::random;
+/// use rufl::random;
 ///
 /// let str = random::alpha_number(6);
 ///

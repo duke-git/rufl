@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::string;
+/// use rufl::string;
 ///
 /// let foo = string::remove_first("abca", "a");
 /// assert_eq!("bca".to_string(), foo);

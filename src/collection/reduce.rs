@@ -19,7 +19,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(15, collection::reduce(&vec![1, 2, 3, 4, 5], |x: &i32, y: &i32, i: usize| { x + y }, 0));
 ///

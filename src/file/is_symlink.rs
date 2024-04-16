@@ -13,7 +13,7 @@ use std::path::Path;
 /// # Examples
 ///
 /// ```
-/// use ruf::file;
+/// use rufl::file;
 ///
 /// let result = file::is_symlink("./src/file/is_symlink.rs");
 /// assert_eq!(false, result);

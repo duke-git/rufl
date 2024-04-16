@@ -12,7 +12,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::math;
+/// use rufl::math;
 ///
 /// assert_eq!(180_f64, math::to_angle(std::f64::consts::PI));
 ///

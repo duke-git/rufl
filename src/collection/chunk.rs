@@ -14,7 +14,7 @@
 /// # Examples
 ///
 /// ```
-/// use ruf::collection;
+/// use rufl::collection;
 ///
 /// assert_eq!(vec![vec![1, 2], vec![3, 4], vec![5]], collection::chunk(vec![1, 2, 3, 4, 5], 2));
 ///
