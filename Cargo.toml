@@ -1,6 +1,6 @@
 [package]
 name = "rufl"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["dudaodong@gmail.com"]
 edition = "2021"
 description = "A powerful util function library for rust"
