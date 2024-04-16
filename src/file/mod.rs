@@ -27,3 +27,6 @@ pub use is_symlink::*;
 
 mod write_to;
 pub use write_to::*;
+
+mod get_md5;
+pub use get_md5::*;

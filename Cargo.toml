@@ -14,6 +14,7 @@ fastrand = "2.0.1"
 lazy_static = "1.4.0"
 regex = "1.10.2"
 unicode-segmentation = "1.10.1"
+md-5 = "0.10.6"
 
 [features]
 default = ["collection", "eventbus", "file", "math", "random", "string"]

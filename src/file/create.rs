@@ -19,7 +19,7 @@ use std::path::Path;
 /// use std::path::Path;
 /// use ruf::file;
 ///
-/// let path = Path::new("./src/file/test.txt");
+/// let path = Path::new("./src/file/test_create.txt");
 /// assert_eq!(false, path.exists());
 ///
 /// let result = file::create(path);
@@ -27,7 +27,7 @@ use std::path::Path;
 /// match result {
 ///   Ok(file) => {
 ///      assert_eq!(true, path.exists());
-///      let _ = fs::remove_file("./src/file/test.txt");
+///      let _ = fs::remove_file("./src/file/test_create.txt");
 ///   }
 ///   Err(err) => {
 ///      println!("Error: {}", err);
@@ -50,7 +50,7 @@ mod tests {
 
     #[test]
     fn test_create() {
-        let path = Path::new("./src/file/test.txt");
+        let path = Path::new("./src/file/test_create.txt");
         assert_eq!(false, path.exists());
 
         let result = create(path);
@@ -58,7 +58,7 @@ mod tests {
         match result {
             Ok(_) => {
                 assert_eq!(true, path.exists());
-                let _ = fs::remove_file("./src/file/test.txt");
+                let _ = fs::remove_file("./src/file/test_create.txt");
             }
             Err(err) => {
                 println!("Error: {}", err);
