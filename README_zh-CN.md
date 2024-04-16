@@ -5,7 +5,7 @@
 
 #### Rufl是一个Rust语言工具函数库。它提供了许多工具函数，让你的rust开发变得更简单.
 
-_Ruf是”rust util function"的缩写。_
+_Rufl是”rust util function"的缩写。_
 
 ## [English](./README.md)
 

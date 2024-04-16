@@ -1,11 +1,11 @@
 <div align=center>
-<img src="./logo.png" width="396" height="215"/>
+<img src="./logo.png" width="439" height="200"/>
 <br/>
 </div>
 
 #### Rufl is an util function library for rust. It provides a series of useful functions to make your rust development easier.
 
-_Ruf is short for "rust util function library"._
+_Rufl is short for "rust util function library"._
 
 ## [简体中文](./README_zh-CN.md)
 
