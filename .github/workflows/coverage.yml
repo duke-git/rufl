@@ -2,9 +2,9 @@ name: Coverage
 
 on:
   push:
-    branches: [ "main", "rc" ]
+    branches: [ "main"]
   pull_request:
-    branches: [ "main", "rc" ]
+    branches: [ "main"]
 
 env:
   CARGO_TERM_COLOR: always
@@ -17,8 +17,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     
-    - name: Run tests
-      run: cargo test --verbose
+    # - name: Run tests
+    #   run: cargo test --verbose
     
     - name: Install cargo-llvm-cov
       uses: taiki-e/install-action@v2.32.17

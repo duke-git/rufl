@@ -11,7 +11,8 @@ _Rufl是”rust util function"的缩写。_
 [![crates.io](https://img.shields.io/crates/v/rufl?label=latest)](https://crates.io/crates/rufl)
 [![Documentation](https://docs.rs/rufl/badge.svg?version=0.1.2)](https://docs.rs/rufl/0.1.2)
 ![MSRV](https://img.shields.io/badge/rustc-1.71+-ab6000.svg)
-[![CI](https://github.com/duke-git/rufl/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/duke-git/rufl/actions/workflows/coverage.yml)
+[![CI](https://github.com/duke-git/rufl/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/duke-git/rufl/actions/workflows/ci.yml)
+[![codecov](https://codecov.io/gh/duke-git/rufl/branch/master/graph/badge.svg)](https://app.codecov.io/gh/duke-git/rufl/tree/main)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/duke-git/rulf/blob/main/LICENSE)
 
 ## [English](./README.md)
