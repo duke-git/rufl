@@ -44,3 +44,7 @@ fn main() {
     println!("current money is {}", money_amount); // current money is $1,234,567
 }
 ```
+
+## 如何贡献代码
+
+#### [贡献代码指南](./CONTRIBUTING.zh-CN.md)

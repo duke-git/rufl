@@ -43,3 +43,7 @@ fn main() {
     println!("current money is {}", money_amount); // current money is $1,234,567
 }
 ```
+
+## How to Contribute
+
+#### [Contributing Guide](./CONTRIBUTING.md)
