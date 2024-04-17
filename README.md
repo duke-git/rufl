@@ -10,7 +10,7 @@ _Rufl is short for "rust util function library"._
 [![crates.io](https://img.shields.io/crates/v/rufl?label=latest)](https://crates.io/crates/rufl)
 [![Documentation](https://docs.rs/rufl/badge.svg?version=0.1.2)](https://docs.rs/rufl/0.1.2)
 ![MSRV](https://img.shields.io/badge/rustc-1.71+-ab6000.svg)
-[![CI](https://github.com/duke-git/rufl/actions/workflows/rust.yml/badge.svg?branch=main)](https://github.com/duke-git/rufl/actions/workflows/rust.yml)
+[![CI](https://github.com/duke-git/rufl/actions/workflows/coverage.yml/badge.svg?branch=main)](https://github.com/duke-git/rufl/actions/workflows/coverage.yml)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/duke-git/rulf/blob/main/LICENSE)
 
 ## [简体中文](./README_zh-CN.md)
@@ -26,7 +26,7 @@ _Rufl is short for "rust util function library"._
 
 ```toml
 [dependencies]
-rufl = "0.1.1"
+rufl = "0.1.2"
 ```
 
 ## Example
