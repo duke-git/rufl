@@ -19,7 +19,7 @@ pub trait Number: Sized + Copy + PartialOrd + PartialEq + 'static {
     fn type_of(self) -> &'static str;
 }
 
-macro_rules! impl_number_for_data {
+macro_rules! impl_number_for_type {
     ($T:ty) => {
         impl Number for $T {
             const ZERO: $T = 0 as $T;
@@ -100,19 +100,19 @@ macro_rules! impl_number_for_data {
     };
 }
 
-impl_number_for_data!(i8);
-impl_number_for_data!(i16);
-impl_number_for_data!(i32);
-impl_number_for_data!(i64);
-impl_number_for_data!(i128);
-impl_number_for_data!(isize);
+impl_number_for_type!(i8);
+impl_number_for_type!(i16);
+impl_number_for_type!(i32);
+impl_number_for_type!(i64);
+impl_number_for_type!(i128);
+impl_number_for_type!(isize);
 
-impl_number_for_data!(u8);
-impl_number_for_data!(u16);
-impl_number_for_data!(u32);
-impl_number_for_data!(u64);
-impl_number_for_data!(u128);
-impl_number_for_data!(usize);
+impl_number_for_type!(u8);
+impl_number_for_type!(u16);
+impl_number_for_type!(u32);
+impl_number_for_type!(u64);
+impl_number_for_type!(u128);
+impl_number_for_type!(usize);
 
-impl_number_for_data!(f32);
-impl_number_for_data!(f64);
+impl_number_for_type!(f32);
+impl_number_for_type!(f64);
