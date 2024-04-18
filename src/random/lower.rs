@@ -1,4 +1,4 @@
-use super::generate;
+use super::rand;
 
 /// Generate random lower case English letter string.
 ///
@@ -23,7 +23,7 @@ use super::generate;
 /// ```
 
 pub fn lower(length: usize) -> String {
-    generate::generate_str("LOWER", length)
+    rand::rand_string(rand::CharType::LowerLetter, length)
 }
 
 #[cfg(test)]

@@ -1,4 +1,4 @@
-use super::generate;
+use super::rand;
 
 /// Generate random string which only contains special chars
 /// (!@#$%^&*()_+-=[]{}|;':\",./<>?).
@@ -26,7 +26,7 @@ use super::generate;
 /// ```
 
 pub fn symbol(length: usize) -> String {
-    generate::generate_str("SYMBOL", length)
+    rand::rand_string(rand::CharType::Symbol, length)
 }
 
 #[cfg(test)]

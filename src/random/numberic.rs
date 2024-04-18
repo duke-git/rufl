@@ -1,4 +1,4 @@
-use super::generate;
+use super::rand;
 
 /// Generate random numberic string.
 ///
@@ -23,7 +23,7 @@ use super::generate;
 /// ```
 
 pub fn numberic(length: usize) -> String {
-    generate::generate_str("NUMBER", length)
+    rand::rand_string(rand::CharType::Numberic, length)
 }
 
 #[cfg(test)]

@@ -1,4 +1,4 @@
-use super::generate;
+use super::rand;
 
 /// Generate random upper case English letter string.
 ///
@@ -23,7 +23,7 @@ use super::generate;
 /// ```
 
 pub fn upper(length: usize) -> String {
-    generate::generate_str("UPPER", length)
+    rand::rand_string(rand::CharType::UpperLetter, length)
 }
 
 #[cfg(test)]

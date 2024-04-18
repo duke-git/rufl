@@ -1,5 +1,4 @@
-use super::generate;
-
+use super::rand;
 /// Generate random alphabetic string.
 ///
 /// # Arguments
@@ -23,7 +22,7 @@ use super::generate;
 /// ```
 
 pub fn alpha_number(length: usize) -> String {
-    generate::generate_str("ALPHANUMERIC", length)
+    rand::rand_string(rand::CharType::AlphaNumberic, length)
 }
 
 #[cfg(test)]
