@@ -1,4 +1,4 @@
-/// Replace the first n `old`` elements with `new` elements within the vector.
+/// Replace the first count n old elements with new elements within the vector.
 ///
 ///
 /// # Arguments
