@@ -1,4 +1,4 @@
-/// Checks if the string numeric (can be parse to number).
+/// Checks if the string numeric (can be parsed to number).
 ///
 /// # Arguments
 ///

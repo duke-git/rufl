@@ -1,5 +1,5 @@
 use super::rand;
-/// Generate random alphabetic string.
+/// Generate random alphabetic or numberic string.
 ///
 /// # Arguments
 ///

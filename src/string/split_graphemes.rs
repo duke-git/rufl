@@ -1,4 +1,4 @@
-/// Split the target string into an array of graphemes.
+/// Split the target string into a vector of graphemes str.
 ///
 ///
 /// # Arguments

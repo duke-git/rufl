@@ -52,6 +52,8 @@ fn main() {
 - [eventbus](#eventbus)
 - [file](#file)
 - [math](#math)
+- [random](#random)
+- [string](#string)
 
 <h3 id="collection">1. Collection mod contains several utility functions to manipulate collection data type. <a href="#index">index</a></h3>
 
@@ -209,6 +211,128 @@ use rufl::math;
 - **to_radian:** Converts angle value to radian value. [[doc](https://docs.rs/rufl/0.1.2/rufl/math/fn.to_radian.html)]
 
 - **truncate:** Truncate number to n decimal places after decimal point. [[doc](https://docs.rs/rufl/0.1.2/rufl/math/fn.truncate.html)]
+
+
+
+<h3 id="random">5. Random mod contains several utility functions for generating random number or string.<a href="#index">index</a></h3>
+
+```rust
+use rufl::random;
+```
+
+- **alpha_number:** Generate random alphabetic or numberic string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.alpha_number.html)]
+
+- **alphabet:** Generate random alphabetic string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.alphabet.html)]
+
+- **lower:** Generate random lower case English letter string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.lower.html)]
+
+- **numberic:** Generate random numberic string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.numberic.html)]
+
+- **symbol:** Generate random string which only contains special chars (!@#$%^&*()_+-=[]{}|;’:",./<>?). [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.symbol.html)]
+
+- **upper:** Generate random upper case English letter string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.upper.html)]
+
+
+
+<h3 id="string">6. String mod contains several utility functions for handling string.<a href="#index">index</a></h3>
+
+```rust
+use rufl::string;
+```
+
+- **add_commas:** Add comma to a number value by every 3 numbers from right. Ahead by prefix symbol. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.add_commas.html)]
+
+- **after:** Returns the substring after the first occurrence of a specified substr in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.after.html)]
+
+- **after_last:** Returns the substring after the last occurrence of a specified substr in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.after_last.html)]
+
+- **before:** Returns the substring before the first occurrence of a specified substr in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.before.html)]
+
+- **before_last:** Returns the substring before the last occurrence of a specified substr in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.before_last.html)]
+
+- **camel_case:** Converts string to camel case.[[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.camel_case.html)]
+
+- **capitalize:** Converts the first character of string to upper case and the remaining to lower case.[[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.capitalize.html)]
+
+- **count_by:** Counts the characters in target string with predicate function, returns the number of all matched characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.count_by.html)]
+
+- **count_chars:** Returns the characters count in target string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.count_chars.html)]
+
+- **count_graphemes:** Returns the graphemes count in target string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.count_graphemes.html)]
+
+- **count_words:** Returns the word count in target string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.count_words.html)]
+
+- **cut:** Cut searches for the substring ‘sep’ in the source string, and splits the source string into two parts at the first occurrence of the substring ‘sep’: before and after. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.cut.html)]
+
+- **hide:** Hides some chars in source string and replace with speicfic substring. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.hide.html)]
+
+- **index:** Searches a string and returns the index of the first occurrence of the specified searched substring. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.index.html)]
+
+- **index_all:** Searches a string and returns all the indexs of the occurrence of the specified searched substring. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.index_all.html)]
+
+- **is_alpha:** Checks if the string contains only alphabetic characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_alpha.html)]
+
+- **is_alphanumberic:** Checks if the string contains only alphabetic or numeric characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_alphanumberic.html)]
+
+- **is_digit:** Checks if the string contains only digit characters.(0-9) [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_digit.html)]
+
+- **is_dns:** Checks if the string is a valid domain name. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_dns.html)]
+
+- **is_email:** Checks if the string is a valid email address. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_email.html)]
+
+- **is_ipv4:** Checks if the string is a valid ipv4 address. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_ipv4.html)]
+
+- **is_ipv6:** Checks if the string is a valid ipv6 address. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_ipv6.html)]
+
+- **is_lowercase:** Checks if the string contains only lowercase unicode characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_lowercase.html)]
+
+- **is_numberic:** Checks if the string numeric (can be parsed to number). [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_numberic.html)]
+
+- **is_strong_password:** Checks if the string is a strong password. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_strong_password.html)]
+
+- **is_uppercase:** Checks if the string contains only uppercase unicode characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_uppercase.html)]
+
+- **is_url:** Checks if the string is a valid url. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.is_url.html)]
+
+- **kebab_case:** Converts string to kebab case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.kebab_case.html)]
+
+- **last_index:** Searches a string and returns the index of the last occurrence of the specified searched substring. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.last_index.html)]
+
+- **lower_first:** Converts the first character of string to lower case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.lower_first.html)]
+
+- **pad:** Pads string on the left and right sides if it’s shorter than length. Padding characters are truncated if they can’t be evenly divided by length. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.pad.html)]
+
+- **pad_end:** 	Pads string on the right side if it’s shorter than length. Padding str are truncated if they exceed length. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.pad_end.html)]
+
+- **pad_start:** Pads string on the left side if it’s shorter than length. Padding str are truncated if they exceed length. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.pad_start.html)]
+
+- **pascal_case:** Converts string to pascal case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.pascal_case.html)]
+
+- **remove_all:** Removes all the specified substring which occurrence in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.remove_all.html)]
+
+- **remove_first:** Removes the specified substring which first occurrence in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.remove_first.html)]
+
+- **remove_last:** Removes the specified substring which last occurrence in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.remove_last.html)]
+
+- **removen:** Removes first n matches substr in the source string. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.removen.html)]
+
+- **snake_case:** Converts string to snake case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.snake_case.html)]
+
+- **split_chars:** 	Split the input string into a vector of characters. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.split_chars.html)]
+
+- **split_graphemes:** Split the target string into a vector of graphemes str. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.split_graphemes.html)]
+
+- **split_words:** Split the input string into a vector of its words (based on the position of capital letters or numbers). [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.split_words.html)]
+
+- **starts_with_offset:** Checks whether a string starts with the specified prefix at offset position. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.starts_with_offset.html)]
+
+- **substring:** Returns the part of target string from the start index up to and excluding the end index. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.substring.html)]
+
+- **title_case:** Converts string to kebab case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.title_case.html)]
+
+- **upper_first:** Converts the first character of string to upper case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.upper_first.html)]
+
+
 
 ## How to Contribute
 

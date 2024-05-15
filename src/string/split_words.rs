@@ -1,4 +1,4 @@
-/// Split the input string into an array of its words (based on the position of capital letters or numbers).
+/// Split the input string into a vector of its words (based on the position of capital letters or numbers).
 ///
 /// Note: This function will split words based on the position of capital letters or numbers.
 ///

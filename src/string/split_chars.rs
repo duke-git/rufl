@@ -1,4 +1,4 @@
-/// Split the input string into an array of characters.
+/// Split the input string into a vector of str.
 ///
 ///
 /// # Arguments
