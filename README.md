@@ -63,7 +63,7 @@ use rufl::collection;
 
 - **all_match:** Returns true if all elements of the collection pass the predicate function check. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.all_match.html)]
 
-- **chunk:** Returns a vector of elements split into groups the length of size. If vector can’t be split evenly. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.chunk.html)]
+- **chunk:** Returns a vector of elements split into groups the length of size. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.chunk.html)]
 
 - **count:** Returns the number of occurrences of the given element in the collection. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.count.html)]
 
@@ -81,7 +81,7 @@ use rufl::collection;
 
 - **filter_map:** Returns a collection which apply both filtering and mapping to the given collection. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.filter_map.html)]
 
-- **find:** Iterates over elements of collection, returning the last one and its index that pass predicate function. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.find.html)]
+- **find:** Iterates over elements of collection, returning the first one and its index that pass predicate function. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.find.html)]
 
 - **find_last:** Iterates over elements of collection, returning the last one and its index that pass predicate function. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.find_last.html)]
 
@@ -109,7 +109,7 @@ use rufl::collection;
 
 - **partition:** Partition collection elements with the evaluation of the given predicate function. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.partition.html)]
 
-- **reduce:** reduces collection to a value which is the accumulated result of running each element in collection thru iteratee [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.reduce.html)]
+- **reduce:** Reduces collection to a value which is the accumulated result of running each element in collection thru iteratee [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.reduce.html)]
 
 - **reduce_right:** Reduce right like reduce except that it iterates over elements of collection from right to left. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.reduce_right.html)]
 
@@ -119,7 +119,7 @@ use rufl::collection;
 
 - **replace_n:** Replace the first count n old elements with new elements in the vector. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.replace_n.html)]
 
-- **shuffle:** Returns a vector of shuffled values [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.shuffle.html)]
+- **shuffle:** Returns a vector of shuffled values. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.shuffle.html)]
 
 - **some_match:** Returns true if any element of the collection pass the predicate function check. [[doc](https://docs.rs/rufl/0.1.2/rufl/collection/fn.some_match.html)]
 
