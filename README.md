@@ -230,6 +230,8 @@ use rufl::random;
 
 - **symbol:** Generate random string which only contains special chars (!@#$%^&*()_+-=[]{}|;’:",./<>?). [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.symbol.html)]
 
+- **string:** Generate random string. (all kinds chars: alphabet, number, symbol). [[doc](https://docs.rs/rufl/0.1.3/rufl/random/fn.string.html)]
+
 - **upper:** Generate random upper case English letter string. [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.upper.html)]
 
 
@@ -328,7 +330,7 @@ use rufl::string;
 
 - **substring:** Returns the part of target string from the start index up to and excluding the end index. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.substring.html)]
 
-- **title_case:** Converts string to kebab case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.title_case.html)]
+- **title_case:** Converts string to title case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.title_case.html)]
 
 - **upper_first:** Converts the first character of string to upper case. [[doc](https://docs.rs/rufl/0.1.2/rufl/string/fn.upper_first.html)]
 

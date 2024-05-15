@@ -19,4 +19,7 @@ pub use alpha_number::*;
 mod symbol;
 pub use symbol::*;
 
+mod string;
+pub use string::*;
+
 mod rand;

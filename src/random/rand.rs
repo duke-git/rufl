@@ -5,7 +5,7 @@ pub(super) enum CharType {
     Letter,
     AlphaNumberic,
     Symbol,
-    // All,
+    All,
 }
 
 impl CharType {
@@ -19,7 +19,7 @@ impl CharType {
                 "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
             }
             CharType::Symbol => "!@#$%^&*()_+-=[]{}|;':\",./<>?",
-            // CharType::All => "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;':\",./<>?",
+            CharType::All => "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()_+-=[]{}|;':\",./<>?",
         }
     }
 }

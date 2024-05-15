@@ -232,6 +232,8 @@ use rufl::random;
 
 - **symbol:** 生成随机特殊字符字符串。 (!@#$%^&*()_+-=[]{}|;’:",./<>?). [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.symbol.html)]
 
+- **string:** 生成随机字符串(包括字母, 数字, 符号)。 [[doc](https://docs.rs/rufl/0.1.3/rufl/random/fn.string.html)]
+
 - **upper:** 生成随机大写英文字母字符串。 [[doc](https://docs.rs/rufl/0.1.2/rufl/random/fn.upper.html)]
 
 
